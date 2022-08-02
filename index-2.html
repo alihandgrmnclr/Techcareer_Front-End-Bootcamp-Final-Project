@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from storage.googleapis.com/theme-vessel-items/checking-sites/hotel-alpha-html/HTML/main/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Jul 2022 13:54:09 GMT -->
+
+<head>
+    <title>Techcareer Bootcamp Final Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <!-- External CSS libraries -->
+    <!-- Login-Register -->
+    <link rel="stylesheet" type="text/css" href="css/Login-Register.css">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/all.css">
+    <!-- Check Out -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/CheckOut.css">
+    <!-- Payment Screen -->
+    <link rel="stylesheet" type="text/css" href="css/PaymentScreen.css">
+
+    <!-- RoomPanel -->
+    <link rel="stylesheet" href="css/RoomPanel.css">
+    
+
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-submenu.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="fonts/linearicons/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" href="css/leaflet.css" type="text/css">
+
+
+    
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/initial.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="css/skins/default.css">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script  src="js/html5shiv.min.js"></script>
+    <script  src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+</head>
+
+<body onload="Login();">
+
+
+    <div ng-app="MyApplication" ng-controller="MyController" ng-init="SetData();">
+
+        <!-- ================================================================================LOGIN-REGISTER START============================================================================== -->
+        <div id="LoginDv" class="LoginDv">
+            <div>
+                <h1 id="CloseButton" ng-click="LoginClose();">X</h1>
+            </div>
+            <div class="LoginForm" id="LoginForm">
+                <div class="form-container sign-up-container">
+                    <form action="#">
+                        <h1>Create Account</h1>
+                        <div class="social-container">
+                            <a class="social"><i class="fa-brands fa-facebook"></i></a>
+                            <a class="social"><i class="fa-brands fa-google-plus"></i></a>
+                            <a class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your email for registration</span>
+                        <input type="text" placeholder="Name" />
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <button>Sign Up</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <form action="#">
+                        <h1>Sign in</h1>
+                        <div class="social-container">
+                            <a class="social"><i class="fa-brands fa-facebook"></i></a>
+                            <a class="social"><i class="fa-brands fa-google-plus"></i></a>
+                            <a class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <span>or use your account</span>
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <a>Forgot your password?</a>
+                        <button>Sign In</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Welcome Back!</h1>
+                            <p>To keep connected with us please login with your personal info</p>
+                            <button class="ghost" id="signIn">Sign In</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Hello, Friend!</h1>
+                            <p>Enter your personal details and start journey with us</p>
+                            <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div id="LoginForm" class="LoginForm">
+    
+    <input type="email" placeholder="Enter your e-mail">
+    <input type="password" placeholder="Enter your password">
+    <button>Login</button>
+    <button ng-click="LoginClose();">X</button>
+    
+</div>
+
+<div id="RegisterForm" class="RegisterForm">
+    
+    <input type="text" placeholder="Enter your name">
+    <input type="email" placeholder="Enter your e-mail">
+    <input type="password" placeholder="Enter your password">
+    <input type="password" placeholder="Enter your password again">
+    <button>Register</button>
+    <button ng-click="RegisterClose();">X</button>
+    
+</div> -->
+
+
+
+        <!-- =================================================================================LOGIN-REGISTER END=============================================================================== -->
+
+
+        <!-- ================================================================================ CHECK OUT START =================================================================================== -->
+        <div style="width: 100%; height: 100%;" id="PaymentScreen" class="CheckOut">
+            <h1 id="PaymentClose" ng-click="PaymentScreenClose();">X</h1>
+            <div class="container mt-4 p-0">
+                <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white pt-3 px-md-4 px-2">
+        <div class="container-fluid"> <a class="navbar-brand" href="#">clothing</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"> <a class="nav-link active" href="#">New</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Men</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Women</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Kids</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Special Offers</a> </li>
+                </ul>
+                <ul class="d-flex mb-0">
+                    <li class="nav-item pe-3">
+                        <div class="d-flex align-items-center">
+                            <div class="icon me-3"> <span class="fas fa-shopping-cart"></span> </div>
+                            <div class="cart">
+                                <p class="">My cart</p> <small class="">3 items</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item me-3">
+                        <div class="btn btn-outline-primary">Sign Up</div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn btn-primary">Login</div>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+                </nav>
+                <div class="row px-md-4 px-2 pt-4">
+                    <div class="col-lg-8">
+                        <p class="pb-2 fw-bold">Order</p>
+                        <div class="card">
+                            <!-- <div class="ribbon ribbon-top-right"><span>SALE TIME!</span></div> -->
+                            <div>
+                                <div class="table-responsive px-md-4 px-2 pt-3">
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr class="border-bottom">
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div> <img class="pic"
+                                                                src="https://images.pexels.com/photos/7322083/pexels-photo-7322083.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                                                alt=""> </div>
+                                                        <div class="ps-3 d-flex flex-column justify-content">
+                                                            <p class="fw-bold">Air<span class="ps-1">Red</span><span
+                                                                    class="ps-1">Pants</span></p> <small
+                                                                class=" d-flex"> <span class=" text-muted">Color:</span>
+                                                                <span class=" fw-bold">Red/White</span> </small> <small
+                                                                class=""> <span class=" text-muted">Size:</span> <span
+                                                                    class=" fw-bold">L</span> </small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <p class="pe-3"><span class="red">$45.00</span></p>
+                                                        <p class="text-muted text-decoration-line-through">$55.00</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center"> <span
+                                                            class="pe-3 text-muted">Quantity</span> <span class="pe-3">
+                                                            <input class="ps-2" type="number" value="2"></span>
+                                                        <div class="round"> <span class=""> L </span> </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-bottom">
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div> <img class="pic"
+                                                                src="https://images.pexels.com/photos/7322083/pexels-photo-7322083.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                                                alt=""> </div>
+                                                        <div class="ps-3 d-flex flex-column">
+                                                            <p class="fw-bold">Court<span class="ps-1">Dri-FIT</span>
+                                                            </p> <small class=" d-flex"> <span
+                                                                    class=" text-muted">Color:</span> <span
+                                                                    class="fw-bold">Dark Blue</span> </small> <small
+                                                                class=""> <span class=" text-muted">Size:</span> <span
+                                                                    class="fw-bold">L</span> </small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <p class="pe-3"><span class="red">$45.00</span></p>
+                                                        <p class="text-muted text-decoration-line-through">$55.00</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center"> <span
+                                                            class="pe-3 text-muted">Quantity</span> <span class="pe-3">
+                                                            <input class="ps-2" type="number" value="2"></span>
+                                                        <div class="round"> <span class=""> L </span> </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class="">
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div> <img class="pic"
+                                                                src="https://images.pexels.com/photos/7322083/pexels-photo-7322083.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                                                alt=""> </div>
+                                                        <div class="ps-3 d-flex flex-column">
+                                                            <p class="fw-bold"> Sportswear<span
+                                                                    class="ps-1">Heritage</span><span
+                                                                    class="ps-1">Windrunner</span></p> <small class="">
+                                                                <span class=" text-muted">Color:</span> <span
+                                                                    class="fw-bold">Blue/White</span> </small> <small
+                                                                class=""> <span class=" text-muted">Size:</span> <span
+                                                                    class="fw-bold">L</span> </small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex">
+                                                        <p class="pe-3"><span class="red">$45.00</span></p>
+                                                        <p class="text-muted text-decoration-line-through">$55.00</p>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center"> <span
+                                                            class="pe-3 text-muted">Quantity</span> <span class="pe-3">
+                                                            <input class="ps-2" type="number" value="2"></span>
+                                                        <div class="round"> <span class=""> L </span> </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 payment-summary">
+                        <p class="fw-bold pt-lg-0 pt-4 pb-2">Payment Summary</p>
+                        <div class="card px-md-3 px-2 pt-4">
+                            <div class="unregistered mb-4"> <span class="py-1">unregistered account</span> </div>
+                            <div class="d-flex justify-content-between pb-3"> <small class="text-muted">Transaction
+                                    code</small>
+                                <p class="">VC115665</p>
+                            </div>
+                            <div class="d-flex justify-content-between b-bottom"> <input type="text" class="ps-2"
+                                    placeholder="COUPON CODE">
+                                <div class="btn btn-primary">Apply</div>
+                            </div>
+                            <div class="d-flex flex-column b-bottom">
+                                <div class="d-flex justify-content-between py-3"> <small class="text-muted">Order
+                                        Summary</small>
+                                    <p>$122</p>
+                                </div>
+                                <div class="d-flex justify-content-between pb-3"> <small
+                                        class="text-muted">Discount</small>
+                                    <p style="color: red;">-$30</p>
+                                </div>
+                                <div class="d-flex justify-content-between pb-3"> <small class="text-muted">Additional
+                                        Service</small>
+                                    <p>$22</p>
+                                </div>
+                                <div class="d-flex justify-content-between"> <small class="text-muted">Total
+                                        Amount</small>
+                                    <p>$132</p>
+                                </div>
+                            </div>
+                            <div style="height: 1.6vh;"></div>
+                        </div>
+                    </div>
+
+                    <!-- 
+                    <div class="col-lg-8 delivery px-md-3 px-1">
+                        <p class="pt-4 fw-bold pb-3 ps-2">Delivery</p>
+                        <div class="d-md-flex justify-content-between align-items-center pb-4">
+                            <div class="size d-flex ps-4">
+                                <label class="option d-flex align-items-center"> <input type="radio" name="radio">
+                                        
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div> -->
+                    <div style="margin-left:90vh" class="col-lg-4">
+                        <p class="pt-4 fw-bold pb-3">Additional Service</p>
+                        <div class="card p-3 mb-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="fw-bold">Care + package</p> <small class="text-muted">Extended booking
+                                        options</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="pe-3">$10.00</p>
+                                    <div class="form-check form-switch"> <input class="form-check-input" type="checkbox"
+                                            id="SwitchCheck"> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="fw-bold">Environment Friendly</p> <small class="text-muted">Add some tip
+                                        for earth care</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="pe-3">$2.00</p>
+                                    <div class="form-check form-switch"> <input class="form-check-input" type="checkbox"
+                                            id="SwitchCheck"> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card p-3 mb-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="fw-bold">Golden Guard</p> <small class="text-muted">30 days more for
+                                        return</small>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <p class="pe-3">$15.00</p>
+                                    <div class="form-check form-switch"> <input class="form-check-input" type="checkbox"
+                                            id="SwitchCheck"> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================================================================================ CHECK OUT END =================================================================================== -->
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFC5925" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div class="page_loader"></div>
+
+        <!-- Option Panel -->
+        <div class="option-panel option-panel-collased">
+            <h2>Basket</h2>
+            <div>PRODUCTS</div>
+
+            <div div id="Products">
+
+
+            </div>
+
+            <a class="read-more-btn" ng-click="ClearBasket();">Clear Basket</a>
+            <a style="display: flex; float: right;" class="read-more-btn" ng-click="PaymentScreenOpen();">Check Out</a>
+            <div class="setting-button">
+                <i class="fa fa-shopping-cart"><span id="BasketCounter" style="margin-left:5px;"></span></i>
+            </div>
+        </div>
+        <!-- /Option Panel -->
+
+        <!-- Top header start -->
+        <header class="top-header" id="top-header-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-7 col-7">
+                        <div class="list-inline">
+                            <a href="tel:+55-4XX-634-7071"><i class="fa fa-phone"></i>Need Support? +00-4X6-634-781</a>
+                            <a href="tel:info@themevessel.com" class="d-none-768"><i
+                                    class="fa fa-envelope"></i>info@themevessel.com</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-5 col-5">
+                        <ul id="UserLogin" class="top-social-media pull-right">
+                            <!-- <li ng-click="LoginOpen();">
+                                <a class="sign-in"><i class="fa fa-sign-in"></i> Login / Register</a>
+                            </li> -->
+                            <li ng-click="LoginOpen();">
+                                <a class="sign-in"><i class="fa fa-user"></i>Login / Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+
+        <!-- Top header end -->
+
+        <!-- Main header start -->
+        <header class="main-header" id="main-header-1">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand logos" href="index.html">
+                        <img src="img/logos/logo.png" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" id="drawer" type="button">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="navbar-collapse collapse w-100 justify-content-end" id="navbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Index
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="index.html">Index 1</a></li>
+                                    <li><a class="dropdown-item" href="index-2.html">Index 2</a></li>
+                                    <li><a class="dropdown-item" href="index-3.html">Index 3</a></li>
+                                    <li><a class="dropdown-item" href="index-4.html">Index 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Rooms
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                    <li><a class="dropdown-item" href="rooms-col-1.html">Rooms 1 Column</a></li>
+                                    <li><a class="dropdown-item" href="rooms-col-2.html">Rooms 2 Column</a></li>
+                                    <li><a class="dropdown-item" href="rooms-col-3.html">Rooms 3 Column</a></li>
+                                    <li><a class="dropdown-item" href="rooms-details.html">Rooms Details 1</a></li>
+                                    <li><a class="dropdown-item" href="rooms-details-2.html">Rooms Details 2</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink6"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                            href="#">Gallery</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="gallery-3column.html">Gallery 3
+                                                    Column</a></li>
+                                            <li><a class="dropdown-item" href="gallery-4column.html">Gallery 4
+                                                    Column</a></li>
+                                            <li><a class="dropdown-item" href="gallery-masonry.html">Gallery Masonry</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">About
+                                            Us</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="about.html">About Us 1</a></li>
+                                            <li><a class="dropdown-item" href="about-2.html">About Us 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="booking-system.html">Booking System</a>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                            href="#">Staff</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="staff.html">Staff 1</a></li>
+                                            <li><a class="dropdown-item" href="staff-2.html">Staff 2</a></li>
+                                            <li><a class="dropdown-item" href="staff-3.html">Staff 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+                                            href="#">Events</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="events.html">Events 1</a></li>
+                                            <li><a class="dropdown-item" href="events-right-sidebar.html">Events 2</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="events-details.html">Events Details</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="pricing-tables.html">Pricing Tables</a>
+                                    <li><a class="dropdown-item" href="typography.html">Typography</a>
+                                    <li><a class="dropdown-item" href="faq.html">Faq</a>
+                                    <li><a class="dropdown-item" href="login.html">Login</a>
+                                    <li><a class="dropdown-item" href="signup.html">Sigup</a>
+                                    <li><a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+                                    <li><a class="dropdown-item" href="404.html">404 Error</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink5"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Blog
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink5">
+                                    <li><a class="dropdown-item" href="blog-right-sidebar.html">Blog Right Sidebar</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="blog-left-sidebar.html">Blog Left Sidebar</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="blog-full-width.html">Blog Fullwidth</a></li>
+                                    <li><a class="dropdown-item" href="blog-creative.html">Blog Creative</a></li>
+                                    <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Contact
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                    <li><a class="dropdown-item" href="contact.html">Contact 1</a></li>
+                                    <li><a class="dropdown-item" href="contact-2.html">Contact 2</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item sp">
+                                <a id="header-search-btn" class="nav-link link-color"><i class="fa fa-search"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="row">
+                    <div class="header-search animated fadeInDown">
+                        <form class="form-inline">
+                            <input type="text" class="form-control" id="searchKey" placeholder="Search...">
+                            <div class="search-btns">
+                                <button type="submit" class="btn btn-default">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main header end -->
+
+        <!-- Sidenav start -->
+        <nav id="sidebar" class="nav-sidebar sidebar-heading-section">
+            <!-- Close btn-->
+            <div id="dismiss">
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="sidebar-inner">
+                <div class="sidebar-logo">
+                    <img src="img/logos/logo.png" alt="sidebarlogo">
+                </div>
+                <div class="sidebar-navigation">
+                    <h3 class="heading">Pages</h3>
+                    <ul class="menu-list">
+                        <li><a href="#" class="active pt0">Index <em class="fa fa-chevron-down"></em></a>
+                            <ul>
+                                <li><a href="index.html">Index 1</a></li>
+                                <li><a href="index-2.html">Index 2</a></li>
+                                <li><a href="index-3.html">Index 3</a></li>
+                                <li><a href="index-4.html">Index 4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Rooms <em class="fa fa-chevron-down"></em></a>
+                            <ul>
+                                <li><a href="rooms-col-1.html">1 Column</a></li>
+                                <li><a href="rooms-col-2.html">2 Column</a></li>
+                                <li><a href="rooms-col-3.html">3 Column</a></li>
+                                <li><a href="rooms-details.html">Rooms Details</a></li>
+                                <li><a href="rooms-details-2.html">Rooms Details 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Pages <em class="fa fa-chevron-down"></em></a>
+                            <ul>
+                                <li>
+                                    <a href="#">About Us<em class="fa fa-chevron-down"></em></a>
+                                    <ul>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="about-2.html">About Us 2</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Gallery<em class="fa fa-chevron-down"></em></a>
+                                    <ul>
+                                        <li><a href="gallery-3column.html">Gallery 3 Column</a></li>
+                                        <li><a href="gallery-4column.html">Gallery 4 Column</a></li>
+                                        <li><a href="gallery-masonry.html">Gallery Masonry</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="booking-system.html">Booking System</a></li>
+                                <li>
+                                    <a href="#">Staff <em class="fa fa-chevron-down"></em></a>
+                                    <ul>
+                                        <li><a href="staff.html">Staff</a></li>
+                                        <li><a href="staff-2.html">Staff 2</a></li>
+                                        <li><a href="staff-3.html">Staff 3</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Events <em class="fa fa-chevron-down"></em></a>
+                                    <ul>
+                                        <li><a href="events.html">Events</a></li>
+                                        <li><a href="events-right-sidebar.html">Events Right Sidebar</a></li>
+                                        <li><a href="events-details.html">Events Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="pricing-tables.html">Pricing Tables</a></li>
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="faq.html">Faq</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a href="signup.html">Signup</a></li>
+                                <li><a href="forgot-password.html">Forgot Password</a></li>
+                                <li><a href="404.html">404 Error</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Contact <em class="fa fa-chevron-down"></em></a>
+                            <ul>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact-2.html">Contact 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog <em class="fa fa-chevron-down"></em></a>
+                            <ul>
+                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                <li><a href="blog-full-width.html">Blog Fullwidth</a></li>
+                                <li><a href="blog-creative.html">Blog Creative</a></li>
+                                <li><a href="blog-details.html">Blog Detail</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="get-in-touch">
+                    <h3 class="heading">Get in Touch</h3>
+                    <div class="sidebar-contact-info">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="body-info">
+                            <a href="tel:0477-0477-8556-552">0477 8556 552</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-contact-info">
+                        <div class="icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="body-info">
+                            <a href="#">info@themevessel.com</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-contact-info mb-0">
+                        <div class="icon">
+                            <i class="fa fa-fax"></i>
+                        </div>
+                        <div class="body-info">
+                            <a href="tel:0477-0477-8556-552">0266 8556 787</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="get-social">
+                    <h3 class="heading">Get Social</h3>
+                    <a href="#" class="facebook-bg">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" class="twitter-bg">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#" class="google-bg">
+                        <i class="fa fa-google"></i>
+                    </a>
+                    <a href="#" class="linkedin-bg">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- Sidenav end -->
+
+        <!-- Banner start -->
+        <div class="banner" id="banner1">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item item active" ng-repeat="Banner in BannerData">
+                        <img class="d-block w-100 h-100" src="{{Banner.ImgUrl}}" alt="banner">
+                        <div class="carousel-caption banner-slider-inner d-flex h-100">
+                            <div class="carousel-content container align-self-center">
+                                <div class="text-center">
+                                    <div class="max-area2">
+                                        <h1 ng-bind="Banner.Title"></h1>
+                                        <p>{{Banner.Text}}</p>
+                                        <a class="btn-lg btn-2" href="#">{{Banner.ButtonText1}}</a>
+                                        <a class="btn-lg btn-1" href="#"><span>{{Banner.ButtonText2}}</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item item" ng-repeat="Banner in BannerDataLower">
+                        <img class="d-block w-100 h-100" src="{{Banner.ImgUrl}}" alt="banner">
+                        <div class="carousel-caption banner-slider-inner d-flex h-100">
+                            <div class="carousel-content container align-self-center">
+                                <div class="text-r">
+                                    <div class="max-area2">
+                                        <h1>{{Banner.Title}}</h1>
+                                        <p>{{Banner.Text}}</p>
+                                        <a class="btn-lg btn-2" href="#">{{Banner.ButtonText1}}</a>
+                                        <a class="btn-lg btn-1" href="#"><span>{{Banner.ButtonText2}}</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="carousel-item item">
+                <img class="d-block w-100 h-100" src="img/banner/img-3.jpg" alt="banner">
+                <div class="carousel-caption banner-slider-inner d-flex h-100">
+                    <div class="carousel-content container align-self-center">
+                        <div class="text-l">
+                            <div class="max-area2">
+                                <h1>Best Place For Relux</h1>
+                                <p>Lorem ipsum dolor sit amet, conconsectetuer adipiscing elit Lorem ipsum dolor sit amet, conconsectetuer</p>
+                                <a class="btn-lg btn-2" href="#">Get Started Now</a>
+                                <a class="btn-lg btn-1" href="#"><span>Learn More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Banner end -->
+
+        <!-- About hotel alpha 2 start -->
+        <div class="about-hotel-alpha-2 content-area-6 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInLeft delay-04s align-self-center">
+                        <div class="text" ng-repeat="Wel in Welcome">
+                            <h5>{{Wel.Greeting1}} <span>{{Wel.Greeting2}}</span></h5>
+                            <h1>{{Wel.Title}}</h1>
+                            <p class="mb-4">{{Wel.Description1}}</p>
+                            <p class="mb-30">{{Wel.Description2}}</p>
+                            <a class="btn-1 comon-btn" href="#"><span>{{Wel.ButtonTxt}}</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInRight delay-04s">
+                        <div class="hotel-banner">
+                            <img src="img/about/img-6.jpg" alt="photo" class="img-fluid w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About hotel alpha 2 end -->
+
+
+        <!-- Search area box 1 start -->
+        <div class="search-area-box-1">
+            <div class="container">
+                <div class="search-contents">
+                    <form method="GET">
+                        <div class="row g-0 search-your-details">
+                            <div class="col-lg-3 col-md-12 align-self-center">
+                                <div class="search-your-rooms">
+                                    <h4>Search</h4>
+                                    <h3 class="room-header">Your <span>Rooms</span></h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-6 col-12 col-pad-0">
+                                        <div class="form-group">
+                                            <input type="text" class="btn-default datepicker" placeholder="Check In">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12 col-pad-0">
+                                        <div class="form-group">
+                                            <input type="text" class="btn-default datepicker" placeholder="Check Out">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12 col-pad-0">
+                                        <div class="form-group">
+                                            <select class="selectpicker search-fields" name="room">
+                                                <option>Room</option>
+                                                <option>Single Room</option>
+                                                <option>Double Room</option>
+                                                <option>Elite Room</option>
+                                                <option>Family Room</option>
+                                                <option>Luxury Room</option>
+                                                <option>Double Room</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12 col-pad-0">
+                                        <div class="form-group">
+                                            <select class="selectpicker search-fields" name="adults">
+                                                <option>Adult</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12 col-pad-0">
+                                        <div class="form-group">
+                                            <select class="selectpicker search-fields" name="children">
+                                                <option>Child</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6 col-12 col-pad-0">
+                                        <div class="form-group">
+                                            <button class="btn-md btn-theme btn-4 btn-7 w-100"
+                                                ng-click="RoomPanelOpen();">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Search area box 1 end -->
+
+
+        <!-- Rooms Panel Open -->
+        <!--
+        <div id="RoomPanel" class="gallery min-vh-100">
+            <div class="container-lg">
+                <div  class="row gy-4 row-cols-1 row-cols-sm-2" ng-repeat="Room in OurBestRooms">{{Room.Room}}
+                    <div class="col"><img class="gallery-item" src="{{Room.ImgUrl}}" alt=""></div>
+                </div>
+            </div>
+            <h1 class="RoomCloseButton" ng-click="RoomPanelClose();">X</h1>
+        </div>-->
+        <!-- Rooms Panel Open Ends -->
+        
+        
+
+
+
+
+
+        <!-- Hotel secion start -->
+        <div class="hotel-section content-area comon-slick">
+            <div class="container">
+                <!-- Main title -->
+                <div class="main-title">
+                    <h1>Our Best Rooms</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                </div>
+                <div class="slick row comon-slick-inner csi2 wow fadeInUp delay-04s"
+                    data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                    <div class="item slide-box" ng-repeat="Room in OurBestRooms">
+                        <div class="hotel-box-3">
+                            <div class="hotel-inner">
+                                <div class="property-inner">
+                                    <div class="photo-overflow">
+                                        <div class="property-photo">
+                                            <img style="height: 400px;" class="img-fluid w-100" src="{{Room.ImgUrl}}"
+                                                alt="photo">
+                                        </div>
+                                    </div>
+                                    <div class="ling-section">
+                                        <h3>
+                                            <a href="#">{{Room.Room}}</a>
+                                            <span class="float-end">${{Room.Price}}</span>
+                                        </h3>
+                                        <ul class="facilities-list clearfix">
+                                            <li ng-repeat="Facility in Facilities">
+                                                <i class="{{Facility.Icon}}"></i>{{Facility.Name}}
+                                            </li>
+                                            <!-- <li>
+                                        <i class="flaticon-air-conditioning"></i>
+                                        AC
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-graph-line-screen"></i>
+                                        TV
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-weightlifting"></i>
+                                        GYM
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-wifi-connection-signal-symbol"></i>
+                                        Wi-fi
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-parking"></i>
+                                        Parking
+                                    </li> -->
+                                        </ul>
+
+                                        <a class="read-more-btn" ng-click="AddToBasket();">Add To Basket</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="item slide-box">
+                <div class="hotel-box-3">
+                    <div class="hotel-inner">
+                        <div class="property-inner">
+                            <div class="photo-overflow">
+                                <div class="property-photo">
+                                    <img class="img-fluid w-100" src="img/room/img-12.jpg" alt="photo">
+                                </div>
+                            </div>
+                            <div class="ling-section">
+                                <h3>
+                                    <a href="rooms-details.html">Luxury Room</a>
+                                    <span class="float-end">$990.00</span>
+                                </h3>
+                                <ul class="facilities-list clearfix">
+                                    <li>
+                                        <i class="flaticon-bed"></i> Beds
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-air-conditioning"></i>
+                                        AC
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-graph-line-screen"></i>
+                                        TV
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-weightlifting"></i>
+                                        GYM
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-wifi-connection-signal-symbol"></i>
+                                        Wi-fi
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-parking"></i>
+                                        Parking
+                                    </li>
+                                </ul>
+                                <a href="rooms-details.html" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item slide-box">
+                <div class="hotel-box-3">
+                    <div class="hotel-inner">
+                        <div class="property-inner">
+                            <div class="photo-overflow">
+                                <div class="property-photo">
+                                    <img class="img-fluid w-100" src="img/room/img-13.jpg" alt="photo">
+                                </div>
+                            </div>
+                            <div class="ling-section">
+                                <h3>
+                                    <a href="rooms-details.html">Double Room</a>
+                                    <span class="float-end">$740.00</span>
+                                </h3>
+                                <ul class="facilities-list clearfix">
+                                    <li>
+                                        <i class="flaticon-bed"></i> Beds
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-air-conditioning"></i>
+                                        AC
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-graph-line-screen"></i>
+                                        TV
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-weightlifting"></i>
+                                        GYM
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-wifi-connection-signal-symbol"></i>
+                                        Wi-fi
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-parking"></i>
+                                        Parking
+                                    </li>
+                                </ul>
+                                <a href="rooms-details.html" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item slide-box">
+                <div class="hotel-box-3">
+                    <div class="hotel-inner">
+                        <div class="property-inner">
+                            <div class="photo-overflow">
+                                <div class="property-photo">
+                                    <img class="img-fluid w-100" src="img/room/img-14.jpg" alt="photo">
+                                </div>
+                            </div>
+                            <div class="ling-section">
+                                <h3>
+                                    <a href="rooms-details.html">Single Room</a>
+                                    <span class="float-end">$940.00</span>
+                                </h3>
+                                <ul class="facilities-list clearfix">
+                                    <li>
+                                        <i class="flaticon-bed"></i> Beds
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-air-conditioning"></i>
+                                        AC
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-graph-line-screen"></i>
+                                        TV
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-weightlifting"></i>
+                                        GYM
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-wifi-connection-signal-symbol"></i>
+                                        Wi-fi
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-parking"></i>
+                                        Parking
+                                    </li>
+                                </ul>
+                                <a href="rooms-details.html" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+                </div>
+                <div class="text-center mb-30">
+                    <a class="btn-lg btn-1" href="rooms-details.html"><span>Browse More Properties</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- Hotel secion end -->
+
+        <div class="photo-gallery content-area">
+            <div class="container">
+                <!-- Main title -->
+                <div class="main-title">
+                    <h1>Our Gallery</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                </div>
+                <ul class="list-inline-listing filters filters-listing-navigation">
+                    <li class="active btn filtr-button filtr" data-filter="all">All</li>
+                    <li ng-repeat="Filter in OurBestRooms" data-filter="{{Filter.Index}}" class="btn btn-inline filtr-button filtr">{{Filter.Room}}</li>
+                    <!-- <li data-filter="2" class="btn btn-inline filtr-button filtr">Deluxe</li>
+                    <li data-filter="3" class="btn btn-inline filtr-button filtr">Royal</li>
+                    <li data-filter="4" class="btn btn-inline filtr-button filtr">Luxury</li> -->
+                </ul>
+                <div class="row filter-portfolio">
+                    <div ng-repeat="Gallery in OurBestRooms " class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="{{Filter.Index}}">
+                        <figure class="portofolio-thumb">
+                            <a><img src="{{Gallery.ImgUrl}}" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">{{Gallery.Title}}</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="3, 4, 2">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-2.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Double Room</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="1, 4, 3">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-3.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Single Room</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="2, 1, 3">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-4.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Family Room</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="3, 1, 2">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-5.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Standard</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="4, 2, 1">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-6.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Couple Room</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="5, 2, 3">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-1.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Family Room</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="4, 1, 2">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-2.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Standard</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="4, 2, 1">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-3.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Couple Room</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="1, 4, 4">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-4.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Single Room</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="4, 1, 3">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-5.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Family Room</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 filtr-item" data-category="3, 2, 4">
+                        <figure class="portofolio-thumb">
+                            <a href="#"><img src="img/room/img-6.jpg" alt="image" class="img-fluid w-100"></a>
+                            <figcaption>
+                                <div class="figure-content">
+                                    <h3 class="title">Standard</h3>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <!-- Our facilties section 2 start -->
+        <div class="our-facilties-section-2 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 wow fadeInLeft delay-04s align-self-center">
+                        <div class="service-text st2">
+                            <h1>Our Facilties</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                            <a class="btn-1 comon-btn bnt-none-992" href="#"><span>View Details</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 wow fadeInRight delay-04s">
+                        <div class="row mls">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="services-box-3 df-box" ng-repeat="Facility in OurFacilities | limitTo: 2">
+                                    <div class="icon">
+                                        <i class="{{Facility.Icon}}"></i>
+                                    </div>
+                                    <div class="detail">
+                                        <h5>
+                                            <a href="#">{{Facility.Title}}</a>
+                                        </h5>
+                                        <p>{{Facility.Description}}</p>
+                                    </div>
+                                </div>
+                                <!-- <div class="services-box-3 df-box" ng-repeat="Facility in OurFacilities | limitTo: 3:1">
+                            <div class="icon">
+                                <i class="{{Facility.Icon}}"></i>
+                            </div>
+                            <div class="detail">
+                                <h5>
+                                    <a href="#">{{Facility.Title}}</a>
+                                </h5>
+                                <p>{{Facility.Description}}</p>
+                            </div>
+                        </div> -->
+
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="services-box-3 df-box" ng-repeat="Facility in OurFacilities | limitTo: 3:2">
+                                    <div class="icon">
+                                        <i class="{{Facility.Icon}}"></i>
+                                    </div>
+                                    <div class="detail">
+                                        <h5>
+                                            <a href="#">{{Facility.Title}}</a>
+                                        </h5>
+                                        <p>{{Facility.Description}}</p>
+                                    </div>
+                                </div>
+                                <!-- <div class="services-box-3 df-box">
+                            <div class="icon">
+                                <i class="flaticon-wifi-connection-signal-symbol"></i>
+                            </div>
+                            <div class="detail">
+                                <h5>
+                                    <a href="#">Free Wi-Fi</a>
+                                </h5>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+                            </div>
+                        </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services 2 end -->
+
+        <!-- Events section start -->
+        <div class="events-secion content-area">
+            <div class="container">
+                <div class="main-title">
+                    <h1>Recent Events</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                </div>
+                <div class="events-box-3 wow fadeInLeft delay-04s" ng-repeat="Event in RecentEventsData">
+                    <div class="event-thumb">
+                        <img src="{{Event.ImgUrl}}" alt="image">
+                    </div>
+                    <div class="event-content">
+                        <ul class="meta">
+                            <li>
+                                <a class="category" href="#">{{Event.Party}}</a>
+                            </li>
+                            <li>
+                                <a href="#" class="date">
+                                    <i class="fa fa-map-marker"></i>{{Event.Location}}
+                                </a>
+                            </li>
+                        </ul>
+                        <h4 class="event-title">
+                            <a href="events-details.html">{{Event.Title}}</a>
+                        </h4>
+                        <p>{{Event.Description}}</p>
+                    </div>
+                    <div class="event-button clearfix">
+                        <a class="main-btn bordered-btn" href="#">{{Event.ButtonText}}<i
+                                class="fa fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="events-box-3 wow fadeInRight delay-04s">
+            <div class="event-thumb">
+                <img src="img/events/img-1.jpg" alt="image">
+            </div>
+            <div class="event-content">
+                <ul class="meta">
+                    <li>
+                        <a class="category" href="events-details.html">Music Party</a>
+                    </li>
+                    <li>
+                        <a href="#" class="date">
+                            <i class="fa fa-map-marker"></i>17 Main Street ,New York
+                        </a>
+                    </li>
+                </ul>
+                <h4 class="event-title">
+                    <a href="events-details.html">Festival Music Electronic</a>
+                </h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+            </div>
+            <div class="event-button clearfix">
+                <a class="main-btn bordered-btn" href="events-details.html">Join Event <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="events-box-3 wow fadeInLeft delay-04s">
+            <div class="event-thumb">
+                <img src="img/events/img-2.jpg" alt="image">
+            </div>
+            <div class="event-content">
+                <ul class="meta">
+                    <li>
+                        <a class="category" href="events-details.html">Fool Party</a>
+                    </li>
+                    <li>
+                        <a href="#" class="date">
+                            <i class="fa fa-map-marker"></i>17 Main Street ,New York
+                        </a>
+                    </li>
+                </ul>
+                <h4 class="event-title">
+                    <a href="events-details.html">Pool Party in summer</a>
+                </h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+            </div>
+            <div class="event-button clearfix">
+                <a class="main-btn bordered-btn" href="events-details.html">Join Event <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+        </div> -->
+                <div class="text-center mb-30">
+                    <a class="btn-lg btn-1" href="events.html"><span>Browse More Events</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- Events section end -->
+
+        <!-- Counters 2 strat -->
+        <div class="bg-white counters-2">
+            <div class="container">
+                <div class="counter-box">
+                    <div class="counter-style cs5">
+                        <div class="counter-num">
+                            <span class="counter">96</span>+
+                        </div>
+                        <div class="counter-text">Guest Stay</div>
+                    </div>
+                    <div class="counter-style cs6">
+                        <div class="counter-num">
+                            <span class="counter">57</span>+
+                        </div>
+                        <div class="counter-text">Book Room</div>
+                    </div>
+                    <div class="counter-style">
+                        <div class="counter-num">
+                            <span class="counter">69</span>+
+                        </div>
+                        <div class="counter-text">Member Stay</div>
+                    </div>
+                    <div class="counter-style cs4">
+                        <div class="counter-num">
+                            <span class="counter">37</span>+
+                        </div>
+                        <div class="counter-text">Meals Served</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Counters 2 end -->
+
+        <!-- staff section start -->
+        <div class="staff-section content-area comon-slick bg-white">
+            <div class="container">
+                <!-- Main title -->
+                <div class="main-title">
+                    <h1>Our Staff</h1>
+                    <p>Meet out small team that make those great products.</p>
+                </div>
+                <div class="slick row comon-slick-inner wow fadeInUp delay-04s"
+                    data-slick='{"slidesToShow": 4, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                    <div class="item slide-box" ng-repeat="Staff in OurStaff">
+                        <div class="staff-box-1">
+                            <div class="photo">
+                                <img style="height: 320px;" src="{{Staff.ImgUrl}}" alt="staff" class="img-fluid w-100">
+                                <div class="overlay">
+                                    <div class="border">
+                                        <div class="icon-holder">
+                                            <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
+                                        </div>
+                                        <div class="icon-holder">
+                                            <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                                        </div>
+                                        <div class="icon-holder">
+                                            <a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <h4 class="title">
+                                    <a href="#">{{Staff.Name}}</a>
+                                </h4>
+                                <p>{{Staff.Job}}</p>
+                                <p><a href="#">{{Staff.Tel}}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="item slide-box">
+                <div class="staff-box-1">
+                    <div class="photo">
+                        <img src="img/staff/img-2.jpg" alt="staff" class="img-fluid w-100">
+                        <div class="overlay">
+                            <div class="border">
+                                <div class="icon-holder">
+                                    <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
+                                </div>
+                                <div class="icon-holder">
+                                    <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                                </div>
+                                <div class="icon-holder">
+                                    <a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4 class="title">
+                            <a href="staff.html">Karen Paran</a>
+                        </h4>
+                        <p>Hotel Director</p>
+                        <p><a href="tel:+55-417-634-7071">+1 204 777 0187</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item slide-box">
+                <div class="staff-box-1">
+                    <div class="photo">
+                        <img src="img/staff/img-1.jpg" alt="staff" class="img-fluid w-100">
+                        <div class="overlay">
+                            <div class="border">
+                                <div class="icon-holder">
+                                    <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
+                                </div>
+                                <div class="icon-holder">
+                                    <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                                </div>
+                                <div class="icon-holder">
+                                    <a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4 class="title">
+                            <a href="staff.html">Zamil Roy</a>
+                        </h4>
+                        <p>Hotel Developer</p>
+                        <p><a href="tel:+55-417-634-7071">+1 204 777 0187</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item slide-box">
+                <div class="staff-box-1">
+                    <div class="photo">
+                        <img src="img/staff/img-4.jpg" alt="staff" class="img-fluid w-100">
+                        <div class="overlay">
+                            <div class="border">
+                                <div class="icon-holder">
+                                    <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
+                                </div>
+                                <div class="icon-holder">
+                                    <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                                </div>
+                                <div class="icon-holder">
+                                    <a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4 class="title">
+                            <a href="staff.html">Shakira Kaisar</a>
+                        </h4>
+                        <p>Support Manager</p>
+                        <p><a href="tel:+55-417-634-7071">+1 204 777 0187</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item slide-box">
+                <div class="staff-box-1">
+                    <div class="photo">
+                        <img src="img/staff/img-3.jpg" alt="staff" class="img-fluid w-100">
+                        <div class="overlay">
+                            <div class="border">
+                                <div class="icon-holder">
+                                    <a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a>
+                                </div>
+                                <div class="icon-holder">
+                                    <a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a>
+                                </div>
+                                <div class="icon-holder">
+                                    <a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h4 class="title">
+                            <a href="staff.html">Maikel John </a>
+                        </h4>
+                        <p>Hotel Manager</p>
+                        <p><a href="tel:+55-417-634-7071">+1 204 777 0187</a></p>
+                    </div>
+                </div>
+            </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- staff section ebd -->
+
+        <!-- Testimonial 5 start -->
+        <div class="testimonial-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 title wow fadeInLeft delay-04s align-self-center">
+                        <h1 style="background-image: url(img/ts-number.jpg);">69</h1>
+                        <h2>Millions of Customers <br> Like Our Services</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-12 wow fadeInRight delay-04s">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="testimonial-detail d-flex">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="0" class="active dbt1" aria-current="true"
+                                        aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="1" class="dbt2" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="2" class="dbt3" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="3" class="dbt4" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="4" class="dbt5" aria-label="Slide 5"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" ng-repeat="Review in Reviews | limitTo: 1">
+                                        <div class="testimonial-info">
+                                            <div class="user-pic">
+                                                <img src="{{Review.ImgUrl}}" alt="user">
+                                            </div>
+                                            <div class="info">
+                                                <h4 class="testimonial-name">{{Review.Name}}</h4>
+                                                <h5 class="job">{{Review.Job}}</h5>
+                                            </div>
+                                            <div class="testimonial-text">
+                                                <p>{{Review.Comment}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" ng-repeat="Review in Reviews | limitTo: 4:1">
+                                        <div class="testimonial-info">
+                                            <div class="user-pic">
+                                                <img src="{{Review.ImgUrl}}" alt="user">
+                                            </div>
+                                            <div class="info">
+                                                <h4 class="testimonial-name">{{Review.Name}}</h4>
+                                                <h5 class="job">{{Review.Job}}</h5>
+                                            </div>
+                                            <div class="testimonial-text">
+                                                <p>{{Review.Comment}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="carousel-item">
+                                <div class="testimonial-info">
+                                    <div class="user-pic">
+                                        <img src="img/avatar/avatar-3.jpg" alt="user">
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="testimonial-name">Hartisona Richard</h4>
+                                        <h5 class="job">Office Manager</h5>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>“ Maecenas finibus eros purus, sit amet condimentum arcu ullamcorper sed. In eu gravida libero. Praesent bibendum rutrum quam, lobortis vehicula nibh placerat at. Vivamus pretium ultricies nisl non eleifend. Aliquam eget”.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-info">
+                                    <div class="user-pic">
+                                        <img src="img/avatar/avatar-4.jpg" alt="user">
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="testimonial-name">Pitarshon Roky</h4>
+                                        <h5 class="job">Web Designer, Uk</h5>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>“ Maecenas finibus eros purus, sit amet condimentum arcu ullamcorper sed. In eu gravida libero. Praesent bibendum rutrum quam, lobortis vehicula nibh placerat at. Vivamus pretium ultricies nisl non eleifend. Aliquam eget”.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-info">
+                                    <div class="user-pic">
+                                        <img src="img/avatar/avatar-6.jpg" alt="user">
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="testimonial-name">Richard Hartisona</h4>
+                                        <h5 class="job">CEO Founder</h5>
+                                    </div>
+                                    <div class="testimonial-text">
+                                        <p>“ Maecenas finibus eros purus, sit amet condimentum arcu ullamcorper sed. In eu gravida libero. Praesent bibendum rutrum quam, lobortis vehicula nibh placerat at. Vivamus pretium ultricies nisl non eleifend. Aliquam eget”.</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial 5 end -->
+
+        <!-- Blog section start -->
+        <div class="blog-section content-area bg-white">
+            <div class="container">
+                <!-- Main title -->
+                <div class="main-title">
+                    <h1>Our Blog</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 wow fadeInLeft delay-04s">
+                        <div class="blog-4" ng-repeat="Blog in OurBlog | limitTo: 1">
+                            <div class="inner-box">
+                                <div class="image-box w-100"><img src="{{Blog.ImgUrl}}" alt="blog-image"></div>
+                                <div class="content-box">
+                                    <div class="post-date">
+                                        <span>{{Blog.Day}}</span>{{Blog.Month}}
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="#">{{Blog.Title}}</a></h4>
+                                        <ul class="post-info clearfix">
+                                            <li><i class="fa fa-user"></i><a href="#">{{Blog.Person}}</a></li>
+                                            <li><i class="fa fa-comment"></i><a href="#">{{Blog.Comment}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6 wow fadeInRight delay-04s">
+                        <div class="blog-4" ng-repeat="Blog in OurBlog | limitTo: 2:1">
+                            <div class="inner-box">
+                                <div class="image-box width-auto"><img src="{{Blog.ImgUrl}}" alt="blog-image"></div>
+                                <div class="content-box">
+                                    <div class="post-date">
+                                        <span>{{Blog.Day}}</span>{{Blog.Month}}
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="#">{{Blog.Title}}</a></h4>
+                                        <ul class="post-info clearfix">
+                                            <li><i class="fa fa-user"></i><a href="#">{{Blog.Person}}</a></li>
+                                            <li><i class="fa fa-comment"></i><a href="#">{{Blog.Comment}}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog section end -->
+
+
+
+        <!-- Our newslatters start -->
+        <div class="our-newslatters">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="wow fadeInRight delay-04s">
+                            <h3>Get Newsletter</h3>
+                            <p>Your download should start automatically, if not Click here. Should I give up, huh?.</p>
+                        </div>
+                        <div class="form-info wow fadeInLeft delay-04s">
+                            <form class="form-inline d-flex" action="#">
+                                <input class="form-control" type="email" id="email" placeholder="Email...">
+                                <button type="submit" class="btn btn-md btn-theme">Get it now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Our newslatters end -->
+
+        <!-- Footer start -->
+        <footer class="main-footer clearfix">
+            <div class="container">
+                <!-- Footer info-->
+                <div class="footer-info">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer-item">
+                                <div class="main-title-2">
+                                    <h1>Contact Us</h1>
+                                </div>
+                                <ul class="personal-info">
+                                    <li>
+                                        <i class="fa fa-map-marker"></i>
+                                        Address: 44 New Design Street,
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope"></i>
+                                        Email:<a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-phone"></i>
+                                        Phone: <a href="tel:+55-417-634-7071">+0477 85X6 552</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-fax"></i>
+                                        Fax: +0477 85X6 552
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="footer-item">
+                                <div class="main-title-2">
+                                    <h1>Booking</h1>
+                                </div>
+                                <ul class="links">
+                                    <li>
+                                        <a href="rooms-col-3.html">Rooms & Suites</a>
+                                    </li>
+                                    <li>
+                                        <a href="rooms-details.html">Restaurant</a>
+                                    </li>
+                                    <li>
+                                        <a href="rooms-col-2.html">Hotel</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Our Facilties</a>
+                                    </li>
+                                    <li>
+                                        <a href="rooms-col-3.html">Rooms</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                            <div class="footer-item">
+                                <div class="main-title-2">
+                                    <h1>About</h1>
+                                </div>
+                                <ul class="links">
+                                    <li>
+                                        <a href="about.html">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-right-sidebar.html">Blog & Events</a>
+                                    </li>
+                                    <li>
+                                        <a href="booking-system.html">Booking</a>
+                                    </li>
+                                    <li>
+                                        <a href="gallery-3column.html">Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer-item newsletter">
+                                <div class="main-title-2">
+                                    <h1>Newsletter</h1>
+                                </div>
+                                <div class="newsletter-inner">
+                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                        deserunt mollit anim id est laborum.</p>
+                                    <form class="form-inline" action="#" method="GET">
+                                        <input type="text" class="form-control" id="inlineFormInputName4"
+                                            placeholder="Your Email">
+                                        <button type="submit" class="btn btn-small"><i
+                                                class="fa fa-paper-plane"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <p> &copy; 2021 <a href="http://themevessel.com/" target="_blank">Theme Vessel</a>. All
+                                Rights Reserved.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="clearfix"></div>
+                            <ul class="social-list">
+                                <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="rss-bg"><i class="fa fa-rss"></i></a></li>
+                                <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+        
+
+
+       
+
+        <script src="js/angular.min.js"></script>
+        <script src="js/Data_Banner.js"></script>
+        <script src="js/Data_RecentEvents.js"></script>
+        <script src="js/Data_Reviews.js"></script>
+        <script src="js/Data_OurBlog.js"></script>
+        <script src="js/Data_OurStaff.js"></script>
+        <script src="js/Data_OurBestRooms.js"></script>
+        <script src="js/Data_Welcome.js"></script>
+        <script src="js/Data_OurFacilities.js"></script>
+        <script src="js/Login.js"></script>
+        <script src="js/MainService.js"></script>
+        <script src="js/MainFactory.js"></script>
+        <script src="js/Main.js"></script>
+        
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/bootstrap-submenu.js"></script>
+        <script src="js/jquery.mb.YTPlayer.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.scrollUp.js"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/jquery.filterizr.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/sidebar.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/dropzone.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        
+       
+        
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+        <!-- Custom javascript -->
+    </div>
+</body>
+
+<!-- Mirrored from storage.googleapis.com/theme-vessel-items/checking-sites/hotel-alpha-html/HTML/main/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Jul 2022 13:54:17 GMT -->
+
+</html>
