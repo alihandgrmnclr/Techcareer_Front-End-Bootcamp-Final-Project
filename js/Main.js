@@ -1,5 +1,5 @@
-var MyApplication = angular.module("MyApplication",["MyModule"]);
-MyApplication.controller("MyController", function($scope, $http, $timeout, MyService) {
+var MyApplication = angular.module("MyApplication",["MyServiceModule","MyFactoryModule"]);
+MyApplication.controller("MyController", function($scope, $http, $timeout, MyService,MyFactory) {
 
     $scope.BannerData = [];
     $scope.BannerDataLower = [];
@@ -65,7 +65,7 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
     }
 
     $scope.RandomCouponCode = function(){
-        MyService.RandomCouponCode();
+        MyFactory.DoRandomCouponCode();
     }
 
 

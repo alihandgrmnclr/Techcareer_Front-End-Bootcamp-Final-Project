@@ -1,4 +1,4 @@
-var MyModule = angular.module("MyModule", []);
+var MyModule = angular.module("MyServiceModule", []);
 MyModule.service("MyService", function ($http, $window, $timeout) {
 
     this.LoginOpen = function () {
@@ -44,26 +44,8 @@ MyModule.service("MyService", function ($http, $window, $timeout) {
         PaymentScreen.className = "CheckOut";
     };
 
-    this.RoomPanelOpen = function(){
-        var RoomPanel = document.getElementById("RoomPanel");
-        RoomPanel.className = "RoomPanel RoomPanel-visible";
-    };
+    
 
-    this.RoomPanelClose = function(){
-        var RoomPanel = document.getElementById("RoomPanel");
-        RoomPanel.className = "RoomPanel";
-    };
-
-    var CouponCode="";
-    this.RandomCouponCode = function(){
-        const Alphabet = "ABCDEFGHIJKLMNOPRSTUVWXYZ0123456789"
-        
-        for (var i = 0; i < 8; i++) {
-            CouponCode += Alphabet.charAt(Math.floor(Math.random() * Alphabet.length));
-        }
-            console.log(CouponCode);
-            CouponCode="";
-    };
 
 
     this.EventPreventer = function () {
