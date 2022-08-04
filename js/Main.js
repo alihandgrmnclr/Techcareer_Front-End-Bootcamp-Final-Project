@@ -68,5 +68,9 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
         MyFactory.DoRandomCouponCode();
     }
 
+    $scope.CouponLuck = function(){
+        MyFactory.DoCouponLuck();
+    }
+
 
 });
