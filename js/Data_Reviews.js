@@ -13,7 +13,7 @@ var Reviews = [
         Name: "Richard Hartisona",
         Job: "CEO Founder",
         Comment: `“ Maecenas finibus eros purus, sit amet condimentum arcu ullamcorper sed. 
-        In eu gravida libero. Praesent bibendum rutrum quam, lobortis vehicula nibh placerat at. Vivamus pretium ultricies nisl non eleifend. Aliquam eget. ”`,
+        In eu gravida libero. Praesent bibendum rutrum quam, lobortis vehicula nibh placerat at.  ”`,
     },
 
     {

@@ -54,7 +54,16 @@ MyModule.service("MyService", function ($http, $window, $timeout) {
         RoomPanel.className = "RoomPanel";
     };
 
-
+    var CouponCode="";
+    this.RandomCouponCode = function(){
+        const Alphabet = "ABCDEFGHIJKLMNOPRSTUVWXYZ0123456789"
+        
+        for (var i = 0; i < 8; i++) {
+            CouponCode += Alphabet.charAt(Math.floor(Math.random() * Alphabet.length));
+        }
+            console.log(CouponCode);
+            CouponCode="";
+    };
 
 
     this.EventPreventer = function () {

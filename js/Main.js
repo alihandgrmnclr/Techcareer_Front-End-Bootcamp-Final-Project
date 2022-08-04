@@ -50,13 +50,11 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
     };
 
 
-
     $scope.BasketList = [];  
     $scope.AddToBasketList = function(iIndex){ 
     $scope.BasketList.push(SliderData[iIndex]); 
        console.log($scope.BasketList); 
     };
-
 
     
     $scope.PaymentScreenOpen = function(){
@@ -66,11 +64,8 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
         MyService.PaymentScreenClose();
     }
 
-    $scope.RoomPanelOpen = function(){
-        MyService.RoomPanelOpen();
-    }
-    $scope.RoomPanelClose = function(){
-        MyService.RoomPanelClose();
+    $scope.RandomCouponCode = function(){
+        MyService.RandomCouponCode();
     }
 
 
