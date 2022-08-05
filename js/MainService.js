@@ -12,16 +12,16 @@ MyModule.service("MyService", function ($http, $window, $timeout) {
         Div.className = "LoginDv";
     };
 
-    var Counter=0;
+    var Counter = 0;
     this.DoAddToBasket = function () {
-        
+
         var Basket = document.getElementById("BasketCounter");
         Counter++;
         Basket.innerHTML = Counter;
         var Product = document.getElementById("Products");
         // Product = document.createElement("div");
         // Product.innerHTML = `<img style="height: 100px; width: 100px;" src="{{Room.ImgUrl}}" ng-repeat="Room in OurBestRooms | limitTo:1"></img>`;
-        
+
     };
 
     this.DoClearBasket = function () {
@@ -29,33 +29,47 @@ MyModule.service("MyService", function ($http, $window, $timeout) {
         Counter = 0;
         Basket.innerHTML = "";
         // var Div = document.getElementById("Products");
-        
+
     };
 
-    this.DoPaymentScreenOpen = function(){
+    this.DoPaymentScreenOpen = function () {
         var PaymentScreen = document.getElementById("PaymentScreen");
         PaymentScreen.className = "CheckOut CheckOut-visible";
-        
+
 
     };
 
-    this.DoPaymentScreenClose = function(){
+    this.DoPaymentScreenClose = function () {
         var PaymentScreen = document.getElementById("PaymentScreen");
         PaymentScreen.className = "CheckOut";
     };
 
+    var CouponCode="";
+    this.DoRandomCouponCode = function () {
+
+        const Alphabet = "ABCDEFGHIJKLMNOPRSTUVWXYZ0123456789"
+
+        for (var i = 0; i < 8; i++) {
+            CouponCode += Alphabet.charAt(Math.floor(Math.random() * Alphabet.length - 1));
+        }
         
-    this.DoCouponLuck= function () {
+        document.getElementById("CouponText").innerHTML = `${CouponCode}`;
+        CouponCode = "";
+    }
+    
+    this.DoCouponLuck = function () {
         const Luck = "123456";
         var chance = (Luck.charAt(Math.random() * Luck.length - 1));
-        
+
             document.getElementById("dice").innerHTML = chance;
+
             if (chance == 5){
                 this.DoRandomCouponCode();
             }
+
         console.log(chance);
-        
-        }
+
+    }
 
 
     this.DoEventPreventer = function () {
