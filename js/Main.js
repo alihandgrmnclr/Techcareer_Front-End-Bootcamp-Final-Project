@@ -28,14 +28,14 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
     $scope.EventPreventer;
 
     $scope.EventPreventer = function(){
-        MyService.EventPreventer();
+        MyService.DoEventPreventer();
     };
 
     $scope.LoginOpen = function(){
-        MyService.LoginOpen();
+        MyService.DoLoginOpen();
     };
     $scope.LoginClose = function(){
-        MyService.LoginClose();
+        MyService.DoLoginClose();
     };
 
 
@@ -43,10 +43,10 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
     $scope.ClearBasket;
 
     $scope.AddToBasket = function(){
-        MyService.AddToBasket();
+        MyService.DoAddToBasket();
     };
     $scope.ClearBasket = function(){
-        MyService.ClearBasket();
+        MyService.DoClearBasket();
     };
 
 
@@ -58,10 +58,10 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
 
     
     $scope.PaymentScreenOpen = function(){
-        MyService.PaymentScreenOpen();
+        MyService.DoPaymentScreenOpen();
     }
     $scope.PaymentScreenClose = function(){
-        MyService.PaymentScreenClose();
+        MyService.DoPaymentScreenClose();
     }
 
     $scope.RandomCouponCode = function(){
@@ -69,7 +69,7 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
     }
 
     $scope.CouponLuck = function(){
-        MyFactory.DoCouponLuck();
+        MyService.DoCouponLuck();
     }
 
 

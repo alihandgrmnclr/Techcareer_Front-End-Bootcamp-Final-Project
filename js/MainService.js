@@ -1,19 +1,19 @@
 var MyModule = angular.module("MyServiceModule", []);
 MyModule.service("MyService", function ($http, $window, $timeout) {
 
-    this.LoginOpen = function () {
+    this.DoLoginOpen = function () {
         let Div = document.getElementById("LoginDv");
         Div.className = "LoginDv LoginDv-visible";
 
     };
 
-    this.LoginClose = function () {
+    this.DoLoginClose = function () {
         let Div = document.getElementById("LoginDv");
         Div.className = "LoginDv";
     };
 
     var Counter=0;
-    this.AddToBasket = function () {
+    this.DoAddToBasket = function () {
         
         var Basket = document.getElementById("BasketCounter");
         Counter++;
@@ -24,7 +24,7 @@ MyModule.service("MyService", function ($http, $window, $timeout) {
         
     };
 
-    this.ClearBasket = function () {
+    this.DoClearBasket = function () {
         var Basket = document.getElementById("BasketCounter");
         Counter = 0;
         Basket.innerHTML = "";
@@ -32,23 +32,33 @@ MyModule.service("MyService", function ($http, $window, $timeout) {
         
     };
 
-    this.PaymentScreenOpen = function(){
+    this.DoPaymentScreenOpen = function(){
         var PaymentScreen = document.getElementById("PaymentScreen");
         PaymentScreen.className = "CheckOut CheckOut-visible";
         
 
     };
 
-    this.PaymentScreenClose = function(){
+    this.DoPaymentScreenClose = function(){
         var PaymentScreen = document.getElementById("PaymentScreen");
         PaymentScreen.className = "CheckOut";
     };
 
-    
+        
+    this.DoCouponLuck= function () {
+        const Luck = "123456";
+        var chance = (Luck.charAt(Math.random() * Luck.length - 1));
+        
+            document.getElementById("dice").innerHTML = chance;
+            if (chance == 5){
+                this.DoRandomCouponCode();
+            }
+        console.log(chance);
+        
+        }
 
 
-
-    this.EventPreventer = function () {
+    this.DoEventPreventer = function () {
         event.preventDefault();
     };
 
