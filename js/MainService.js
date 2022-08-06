@@ -63,8 +63,12 @@ MyModule.service("MyService", function ($http, $window, $timeout) {
 
             document.getElementById("dice").innerHTML = chance;
 
+            var Btn = document.getElementById("DiceButton");
+            var DiceNo = document.getElementById("dice");
             if (chance == 5){
                 this.DoRandomCouponCode();
+                Btn.remove();
+                DiceNo.innerHTML=`Congratulations! <br>`;
             }
 
         console.log(chance);
