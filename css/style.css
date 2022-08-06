@@ -8517,9 +8517,11 @@ span.flatpickr-weekday {
 
 @media (max-width: 768px) {
     .setting-button {
-        display: none;
+        top: 50px;
     }
-
+    .option-panel {
+        font-size: 0.8rem;
+    }
     .stepwizard .btn-circle {
         width: 50px;
         height: 50px;
