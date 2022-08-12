@@ -39,8 +39,8 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
     };
 
 
-    $scope.AddToBasket;
-    $scope.ClearBasket;
+    // $scope.AddToBasket;
+    // $scope.ClearBasket;
 
     $scope.AddToBasket = function(){
         MyService.DoAddToBasket();
@@ -71,6 +71,119 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
     $scope.CouponLuck = function(){
         MyService.DoCouponLuck();
     }
+
+ // -----------Zeynep's code----------------------
+
+ $scope.BasketList = [];
+ $scope.BasketPriceList = [];
+ $scope.result = 0;
+
+
+
+ $scope.AddToBasket = function () {
+     MyService.AddToBasket();
+ };
+ $scope.ClearBasket = function () {
+     MyService.ClearBasket();
+ };
+
+
+
+
+ $scope.AddItems = function (iIndex) {
+     MyService.AddItems(iIndex);
+
+ };
+
+
+ $scope.ChangeCounter = function (iIndex) {
+     MyService.ChangeCounter(iIndex);
+ };
+
+ $scope.AddToBasketList = function (iIndex) {
+     if ($scope.BasketList.indexOf(OurBestRooms[iIndex]) == -1) {
+         $scope.BasketList.push(OurBestRooms[iIndex]);
+     }
+
+     console.log($scope.BasketList);
+ };
+
+ // $scope.FindBasketPrice = function (iIndex) {
+ //     $scope.TotalPrice = document.getElementById('TotalPrice');
+ //     $scope.BasketPriceList.push(OurBestRooms[iIndex].Price);
+
+ //     $scope.result += $scope.BasketPriceList[iIndex];
+
+ //     $scope.TotalPrice.innerHTML = "$" + $scope.result;
+
+ // };
+
+
+ $scope.ClearBasket = function () {
+     MyService.ClearBasket();
+     $scope.i = 0;
+     for ($scope.i = $scope.BasketList.length; $scope.i > 0; $scope.i--) {
+
+         $scope.BasketList.pop();
+
+     };
+     console.log($scope.BasketList)
+     for ($scope.i = $scope.BasketPriceList.length; $scope.i > 0; $scope.i--) {
+
+         $scope.BasketPriceList.pop();
+
+     };
+ };
+
+ $scope.ShowSimpleSweetAlert = function (iIndex) {
+     $scope.OurBestRooms = OurBestRooms;
+     Swal.fire(
+         'Success!',
+         `"${OurBestRooms[iIndex].Room}" has been added to your card.`,
+         'success'
+     );
+
+ };
+
+ // $scope.FindOrderSummary = function(){
+ //     $scope.OrderSummary = document.getElementById('OrderSummary');  
+ //     for()
+ //     $scope.BasketPriceList
+
+
+ // };
+
+ //    $scope.PaymentScreenOpen = function() {  
+ //     TravelService.PaymentScreenOpen();
+ //    };
+
+ //    $scope.PaymentScreenClose = function() {  
+ //     TravelService.PaymentScreenClose();
+ //    };
+ //     };
+
+ $scope.FindBasketPrice = function (iIndex) {
+     MyService.FindBasketPrice(iIndex);
+ };
+
+ $scope.FindOrderSummary = function () {
+
+     MyService.FindOrderSummary();
+ };
+
+ $scope.FindDiscount = function () {
+
+     MyService.FindDiscount();
+ };
+
+ $scope.FindTotalAmount = function () {
+     MyService.FindTotalAmount();
+ };
+
+
+ $scope.FindTotalAmountWithDiscount = function () {
+     MyService.FindTotalAmountWithDiscount();
+ };
 
 
 });

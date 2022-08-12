@@ -139,10 +139,38 @@
         <!-- =================================================================================LOGIN-REGISTER END=============================================================================== -->
 
 
-        <!-- ================================================================================ CHECK OUT START =================================================================================== -->
-        <div style="width: 100%; height: 100%;" id="PaymentScreen" class="CheckOut">
+         <!-- ================================================================================ CHECK OUT START =================================================================================== -->
+         <div style="width: 100%; height: 100%;" id="PaymentScreen" class="CheckOut">
             <h1 id="PaymentClose" ng-click="PaymentScreenClose();">X</h1>
             <div class="container mt-4 p-0">
+                <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white pt-3 px-md-4 px-2">
+    <div class="container-fluid"> <a class="navbar-brand" href="#">clothing</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"> <a class="nav-link active" href="#">New</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Men</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Women</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Kids</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Special Offers</a> </li>
+            </ul>
+            <ul class="d-flex mb-0">
+                <li class="nav-item pe-3">
+                    <div class="d-flex align-items-center">
+                        <div class="icon me-3"> <span class="fas fa-shopping-cart"></span> </div>
+                        <div class="cart">
+                            <p class="">My cart</p> <small class="">3 items</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item me-3">
+                    <div class="btn btn-outline-primary">Sign Up</div>
+                </li>
+                <li class="nav-item">
+                    <div class="btn btn-primary">Login</div>
+                </li>
+            </ul>
+        </div>
+    </div> -->
                 </nav>
                 <div class="row px-md-4 px-2 pt-4">
                     <div class="col-lg-8">
@@ -153,26 +181,26 @@
                                 <div class="table-responsive px-md-4 px-2 pt-3">
                                     <table class="table table-borderless">
                                         <tbody>
-                                            <tr class="border-bottom">
+                                            <tr class="border-bottom" ng-repeat="Basket in BasketList">
                                                 <td>
                                                     <div class="d-flex align-items-center">
                                                         <div> <img class="pic"
-                                                                src="https://images.pexels.com/photos/7322083/pexels-photo-7322083.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                                                src="{{Basket.ImgUrl}}"
                                                                 alt=""> </div>
                                                         <div class="ps-3 d-flex flex-column justify-content">
                                                             <p class="fw-bold">Air<span class="ps-1">Red</span><span
-                                                                    class="ps-1">Pants</span></p> <small
-                                                                class=" d-flex"> <span class=" text-muted">Color:</span>
-                                                                <span class=" fw-bold">Red/White</span> </small> <small
-                                                                class=""> <span class=" text-muted">Size:</span> <span
-                                                                    class=" fw-bold">L</span> </small>
+                                                                    class="ps-1">{{Basket.Room}}</span></p> <small
+                                                                class=" d-flex"> <span class=" text-muted"></span>
+                                                                <span class=" fw-bold"></span> </small> <smalls
+                                                                class=""> <span class=" text-muted"></span> <span
+                                                                    class=" fw-bold"></span> </smalls>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <p class="pe-3"><span class="red">$45.00</span></p>
-                                                        <p class="text-muted text-decoration-line-through">$55.00</p>
+                                                        <p class="pe-3"><span class="red">${{Basket.Price}}</span></p>
+                                                        <p class="text-muted text-decoration-line-through">${{Basket.OldPrice}}</p>
                                                     </div>
                                                 </td>
                                                 <td>
@@ -183,7 +211,7 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr class="border-bottom">
+                                            <!-- <tr class="border-bottom">
                                                 <td>
                                                     <div class="d-flex align-items-center">
                                                         <div> <img class="pic"
@@ -212,8 +240,8 @@
                                                         <div class="round"> <span class=""> L </span> </div>
                                                     </div>
                                                 </td>
-                                            </tr>
-                                            <tr class="">
+                                            </tr> -->
+                                            <!-- <tr class="">
                                                 <td>
                                                     <div class="d-flex align-items-center">
                                                         <div> <img class="pic"
@@ -243,7 +271,7 @@
                                                         <div class="round"> <span class=""> L </span> </div>
                                                     </div>
                                                 </td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
@@ -254,50 +282,123 @@
                         <p class="fw-bold pt-lg-0 pt-4 pb-2">Payment Summary</p>
                         <div class="card px-md-3 px-2 pt-4">
                             <div class="unregistered mb-4"> <span class="py-1">unregistered account</span> </div>
-                            <div class="d-flex justify-content-between pb-3"> <small class="text-muted">Transaction
+                            <!-- <div class="d-flex justify-content-between pb-3"> <small class="text-muted">Transaction
                                     code</small>
-                                <p class="">VC115665</p>
-                            </div>
-                            <div class="d-flex justify-content-between b-bottom"> <input type="text" class="ps-2"
+                                <p class="">GJSD85</p>
+                            </div> -->
+                            <div class="d-flex justify-content-between b-bottom"> <input type="text" name="code" id="CouponCode"class="ps-2"
                                     placeholder="COUPON CODE">
-                                <div class="btn btn-primary">Apply</div>
+                                <button type="submit" class="btn btn-primary" id="BtnDiscountApply" ng-click="FindDiscount(); FindTotalAmountWithDiscount();">Apply</button>
                             </div>
                             <div class="d-flex flex-column b-bottom">
-                                <div class="d-flex justify-content-between py-3"> <small class="text-muted">Order
+                                <div id="OrderSummary" class="d-flex justify-content-between py-3"> <small class="text-muted" >Order
                                         Summary</small>
                                     <p>$122</p>
                                 </div>
                                 <div class="d-flex justify-content-between pb-3"> <small
-                                        class="text-muted">Discount</small>
-                                    <p style="color: red;">-$30</p>
+                                        class="text-muted" >Discount</small>
+                                    <p id="Discount" style="color: red;">-$0</p>
                                 </div>
                                 <div class="d-flex justify-content-between pb-3"> <small class="text-muted">Additional
                                         Service</small>
-                                    <p>$22</p>
+                                    <p>$0</p>
                                 </div>
                                 <div class="d-flex justify-content-between"> <small class="text-muted">Total
                                         Amount</small>
-                                    <p>$132</p>
+                                    <p id="TotalAmount">$132</p>
                                 </div>
                             </div>
                             <div style="height: 1.6vh;"></div>
                         </div>
                     </div>
-
-                    <!-- 
-                    <div class="col-lg-8 delivery px-md-3 px-1">
-                        <p class="pt-4 fw-bold pb-3 ps-2">Delivery</p>
-                        <div class="d-md-flex justify-content-between align-items-center pb-4">
-                            <div class="size d-flex ps-4">
-                                <label class="option d-flex align-items-center"> <input type="radio" name="radio">
-                                        
-                                </label>
-                            </div>
-
-                        </div>
-
-                    </div> -->
-                    <div style="margin-left:90vh" class="col-lg-4">
+                    <!-- <div class="col-lg-8 delivery px-md-3 px-1">
+                    <p class="pt-4 fw-bold pb-3 ps-2">Delivery</p>
+                    <div class="d-md-flex justify-content-between align-items-center pb-4">
+                        <div class="size d-flex ps-4"> <label class="option d-flex align-items-center"> <input
+                                    type="radio" name="radio">
+                                <div class="card">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex align-items-center justify-content-center"> <img
+                                                class="del"
+                                                src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
+                                                alt="">
+                                            <p class="ps-2">DPD</p>
+                                        </div>
+                                        <div class=" d-flex flex-column px-3">
+                                            <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
+                                                class="text-muted pb-1">Expected<span
+                                                    class="ps-1">delivery:</span></small> <small
+                                                class="text-muted pb-1">Friday:28</small>
+                                        </div>
+                                        <p class="fw-bold">$5.25</p>
+                                    </div>
+                                </div> <span class="checkmark"></span>
+                            </label> </div>
+                        <div class="size d-flex pt-md-0 pt-3 ps-md-0 ps-4"> <label
+                                class="option d-flex align-items-center"> <input type="radio" name="radio">
+                                <div class="card">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex align-items-center justify-content-center"> <img
+                                                class="del"
+                                                src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
+                                                alt="">
+                                            <p class="ps-2">DPD</p>
+                                        </div>
+                                        <div class=" d-flex flex-column px-3">
+                                            <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
+                                                class="text-muted pb-1">Expected<span
+                                                    class="ps-1">delivery:</span></small> <small
+                                                class="text-muted pb-1">Friday:28</small>
+                                        </div>
+<p class="fw-bold">$5.25</p>
+                                    </div>
+                                </div> <span class="checkmark"></span>
+                            </label> </div>
+                    </div>
+                    <div class="d-md-flex justify-content-between align-items-center pb-4">
+                        <div class="size d-flex ps-4"> <label class="option d-flex align-items-center"> <input
+                                    type="radio" name="radio">
+                                <div class="card">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex align-items-center justify-content-center"> <img
+                                                class="del"
+                                                src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
+                                                alt="">
+                                            <p class="ps-2">DPD</p>
+                                        </div>
+                                        <div class=" d-flex flex-column px-3">
+                                            <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
+                                                class="text-muted pb-1">Expected<span
+                                                    class="ps-1">delivery:</span></small> <small
+                                                class="text-muted pb-1">Friday:28</small>
+                                        </div>
+                                        <p class="fw-bold">$5.25</p>
+                                    </div>
+                                </div> <span class="checkmark"></span>
+                            </label> </div>
+                        <div class="size d-flex pt-md-0 pt-3 ps-md-0 ps-4"> <label
+                                class="option d-flex align-items-center"> <input type="radio" name="radio">
+                                <div class="card">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex align-items-center justify-content-center"> <img
+                                                class="del"
+                                                src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
+                                                alt="">
+                                            <p class="ps-2">DPD</p>
+                                        </div>
+                                        <div class=" d-flex flex-column px-3">
+                                            <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
+                                                class="text-muted pb-1">Expected<span
+                                                    class="ps-1">delivery:</span></small> <small
+                                                class="text-muted pb-1">Friday:28</small>
+                                        </div>
+                                        <p class="fw-bold">$5.25</p>
+                                    </div>
+                                </div> <span class="checkmark"></span>
+                            </label> </div>
+                    </div>
+                </div> -->
+                    <div style="margin-left:90vh;" class="col-lg-4  ">
                         <p class="pt-4 fw-bold pb-3">Additional Service</p>
                         <div class="card p-3 mb-2">
                             <div class="d-flex align-items-center justify-content-between">
@@ -342,7 +443,7 @@
                 </div>
             </div>
         </div>
-        <!-- ================================================================================ CHECK OUT END =================================================================================== -->
+        <!-- ================================================================================ CHECK OUT END ========================== -->
 
         <!-- Google Tag Manager (noscript) -->
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFC5925" height="0" width="0"
@@ -351,17 +452,71 @@
         <div class="page_loader"></div>
 
         <!-- Option Panel -->
-        <div class="option-panel option-panel-collased">
+        
+        <div class="option-panel option-panel-collased" >
             <h2>Basket</h2>
-            <div>PRODUCTS</div>
+            <div> <strong>PRODUCTS</strong> </div>
 
-            <div div id="Products">
+            <div class="shopping-item">
+                <div class="dropdown-cart-header">
+                    <span id="NumberOfItem"> 0 Items</span>
+                    <a href="cart.html">View Cart</a>
+                </div>
+                <ul class="shopping-list" id="ShoppingList">
+                    <li ng-repeat="Basket in BasketList">
+                        <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                class="lni lni-close"></i></a>
+                        <div style="display:flex; flex-direction: row;">
+                            <div class="cart-img-head">
+                                <div class="cart-img" href="product-details.html"><img class="img-basket"
+                                        src="{{Basket.ImgUrl}}" alt="#"></div>
+                            </div>
 
-
+                            <div class=" text-basket">
+                                <h4>{{Basket.Room}}</h4>
+                                <p class="quantity">{{Basket.Counter}}x- <span class="amount">${{Basket.Price}}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li>
+                        <a href="javascript:void(0)" class="remove" title="Remove this item"><i
+                                class="lni lni-close"></i></a>
+                        <div class="cart-img-head">
+                            <a class="cart-img" href="product-details.html"><img
+                                    src="assets/images/header/cart-items/item2.jpg" alt="#"></a>
+                        </div>
+                        <div class="content">
+                            <h4><a href="product-details.html">Wi-Fi Smart Camera</a></h4>
+                            <p class="quantity">1x - <span class="amount">$35.00</span></p>
+                        </div>
+                    </li>  -->
+                </ul>
+                <div class="bottom">
+                    <div class="total">
+                        <span>Total</span>
+                        <span id="TotalPrice" class="total-amount">0</span>
+                    </div>
+                    <div class="button">
+                        <b ng-click="PaymentScreenOpen(); FindOrderSummary(); FindTotalAmount(); " class="btn animate">Checkout</b>
+                    </div>
+                </div>
             </div>
 
+
+
+
+
+
+
+
+            <!-- <div div id="Products">
+          
+          
+
+            </div> -->
+
             <a class="read-more-btn" ng-click="ClearBasket();">Clear Basket</a>
-            <a style="display: flex; float: right;" class="read-more-btn" ng-click="PaymentScreenOpen();">Check Out</a>
             <div class="setting-button">
                 <i class="fa fa-shopping-cart"><span id="BasketCounter" style="margin-left:5px;"></span></i>
             </div>
@@ -844,7 +999,7 @@
                                             </li>
                                         </ul>
 
-                                        <a class="read-more-btn" ng-click="AddToBasket();">Add To Basket</a>
+                                        <a class="read-more-btn" ng-click="AddToBasketList(Room.Index); AddItems(Room.Counter); ChangeCounter(Room.Index); FindBasketPrice(Room.Index); ShowSimpleSweetAlert(Room.Index);">Add To Basket</a>
                                     </div>
                                 </div>
                             </div>
@@ -1178,21 +1333,20 @@
         <!-- Blog section end -->
 
 
-        <!-- Coupon Code Start -->
-        <div id="" class="CouponMain">
-            <div class="CouponDiv">
-                <div class="CouponInnerDiv">
-                    <span id="CouponSpan"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/29496/dice-a-aidima-kauliukas-loa-ima-games-clipart-sm.png" height="50" alt=""></span>
-                    <h1>Hey!</h1>
-                    <p>Feel Lucky? If you dice 5 you'll earn 10% discount Coupon!</p>
-                    <button id="DiceButton" ng-click="CouponLuck();" type="button">Roll</button>
-                    <span id="dice"></span>
-                    <span style="color: white;" id="CouponText"></span>
-                </div>
+       <!-- Coupon Code Start -->
+       <div id="" class="CouponMain">
+        <div class="CouponDiv">
+            <div class="CouponInnerDiv">
+                <span id="CouponSpan"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/29496/dice-a-aidima-kauliukas-loa-ima-games-clipart-sm.png" height="50" alt=""></span>
+                <h1>Hey!</h1>
+                <p>Feel Lucky? If you dice 5 you'll earn 10% discount Coupon!</p>
+                <button id="DiceButton" ng-click="CouponLuck();" type="button">Roll</button>
+                <span id="dice"></span>
+                <span style="color: white;" id="CouponText"></span>
             </div>
         </div>
-        <!-- Coupon Code End -->
-
+    </div>
+    <!-- Coupon Code End -->
 
         <!-- Our newslatters start -->
         <div class="our-newslatters">
@@ -1369,6 +1523,7 @@
         <script src="js/app.js"></script>
         <script src="js/dropzone.js"></script>
         <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 

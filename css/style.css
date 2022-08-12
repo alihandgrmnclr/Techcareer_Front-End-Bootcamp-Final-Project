@@ -1155,6 +1155,7 @@ b, strong {
     -o-transition: all 1s ease;
     transition: all 1s ease;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    
 }
 
 .option-panel-collased {
@@ -8517,11 +8518,9 @@ span.flatpickr-weekday {
 
 @media (max-width: 768px) {
     .setting-button {
-        top: 50px;
+        display: none;
     }
-    .option-panel {
-        font-size: 0.8rem;
-    }
+
     .stepwizard .btn-circle {
         width: 50px;
         height: 50px;
@@ -9226,4 +9225,23 @@ span.flatpickr-weekday {
 
 .img-inside-map {
     height: 230px;
+}
+
+
+
+
+.img-basket{
+    margin: 10px;
+    padding:3px;
+    width: 120px;
+    height: 120px;
+    border-radius: 10%;
+}
+
+.text-basket{
+
+padding-top: 20px;
+
+width: 100px;
+height: auto;
 }
