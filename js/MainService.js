@@ -460,18 +460,17 @@ this.DoChangeUserPassword = function(){
    <input style="margin-bottom: 20px; padding:5px; border-radius:5px;" id="oldpassword" type="password" placeholder="Old Password.."><br>
    <label>New Password :</label>
    <input style="margin-bottom: 20px; padding:5px; border-radius:5px;" id="newpassword" type="password" placeholder="New Password.."><br>
-   <button style="margin-left:60px; margin-bottom:20px" class="btn btn-primary" ng-click="ChangeOldPassword(); " id="resetPassword" type="button">Reset Password</button>
+   <button style="margin-left:60px; margin-bottom:20px" class="btn btn-primary" ng-click="ChangeOldPassword();" id="resetPassword" type="button">Reset Password</button>
    </div>
    `;
                 
 }
 // <!------------ DEVAM EDİLECEK ----------- !> 
 
-
 this.DoChangeOldPassword = function(){
-     console.log("selam");
-    
+    console.log("Selam");
 }
+
 this.DoChangeMailAdress = function(){
    var UserInformationsMail = document.getElementById("accountInformations");
    UserInformationsMail.innerHTML ="";
@@ -483,12 +482,13 @@ this.DoChangeMailAdress = function(){
    <input style="margin-bottom: 20px; padding:5px; border-radius:5px;" type="password" placeholder="Old mail adress.."><br>
    <label>New Mail Adress :</label>
    <input style="margin-bottom: 20px; padding:5px; border-radius:5px;" type="password" placeholder="New Mail Adress.."><br>
-   <button style="margin-left:90px; margin-bottom:20px" class="btn btn-primary" type="button">Reset Mail Adress</button>
+   <button style="margin-left:90px; margin-bottom:20px"  class="btn btn-primary" type="button">Reset Mail Adress</button>
    </div>
    `;
 
 
 }
+
 
 
 });
