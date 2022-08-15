@@ -487,7 +487,7 @@
             <h2>Basket</h2>
             <div> <strong>PRODUCTS</strong> </div>
 
-            <div class="shopping-item">
+            <div class="shopping-item" style="overflow: auto; min-height: 75px; max-height: 400px;">
                 <div class="dropdown-cart-header">
                     <span id="NumberOfItem"> 0 Items</span>
                     <a href="cart.html">View Cart</a>
@@ -522,15 +522,7 @@
                         </div>
                     </li>  -->
                 </ul>
-                <div class="bottom">
-                    <div class="total">
-                        <span>Total</span>
-                        <span id="TotalPrice" class="total-amount">0</span>
-                    </div>
-                    <div class="button">
-                        <b ng-click="PaymentScreenOpen(); FindOrderSummary(); FindTotalAmount(); " class="btn animate">Checkout</b>
-                    </div>
-                </div>
+                
             </div>
 
 
@@ -540,12 +532,15 @@
 
 
 
-            <!-- <div div id="Products">
-          
-          
-
-            </div> -->
-
+            <div class="bottom">
+                <div class="total float-end mt-4" >
+                    <span>Total</span>
+                    <span id="TotalPrice" class="total-amount">0</span>
+                    </div>
+                </div>
+            <div class="button">
+                <a ng-click="PaymentScreenOpen(); FindOrderSummary(); FindTotalAmount(); " class="btn animate mt-2 read-more-btn" >Checkout</a>
+            </div>
             <a class="read-more-btn" ng-click="ClearBasket();">Clear Basket</a>
             <div class="setting-button">
                 <i class="fa fa-shopping-cart"><span id="BasketCounter" style="margin-left:5px;"></span></i>

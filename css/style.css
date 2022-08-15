@@ -6229,6 +6229,9 @@ footer ul {
 .pagination .page-item a.active{
     color: #fff;
 }
+.checkoutButton{
+    color: #f4a460;
+}
 
 /** Login section start **/
 .login-section {
