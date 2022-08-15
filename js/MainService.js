@@ -10,8 +10,16 @@ MyModule.service("MyService", function ($http, $window, $timeout) {
     var CouponCodeList = [];
 
     this.DoLoginOpen = function () {
+        let loginregisterButton = document.getElementById("loginregisterbutton");
         let Div = document.getElementById("LoginDv");
-        Div.className = "LoginDv LoginDv-visible";
+        
+        if(loginregisterButton.textContent == "Login/Register"){
+            Div.className = "LoginDv LoginDv-visible";
+        }
+        else{
+            return;
+        }
+
 
     };
 
@@ -90,6 +98,9 @@ MyModule.service("MyService", function ($http, $window, $timeout) {
     this.DoEventPreventer = function () {
         event.preventDefault();
     };
+
+
+
 //  -----------Zeynep's code---------
 
 
@@ -288,6 +299,196 @@ this.FindTotalAmountWithDiscount = function(){
    
 
 };
+
+// <!--- Mustafa --- !> //
+
+this.MyAccountPageOpen = function(){
+    var MyAccountPage = document.getElementById("MyAccountPage");
+    MyAccountPage.className="MyAccountPage MyAccountPage-visible";
+}
+this.MyAccountPageClose = function(){
+    var MyAccountPage = document.getElementById("MyAccountPage");
+    MyAccountPage.className="MyAccountPage";
+   
+}
+this.DoShowMyAccountPage = function(){
+    var loginRegisterButton = document.getElementById("loginregisterbutton");
+    if(loginRegisterButton.textContent==checkUsername){
+        var MyAccountPage = document.getElementById("MyAccountPage");
+        MyAccountPage.className="MyAccountPage MyAccountPage-visible";
+    }
+    else{
+        return;
+    }
+}
+
+this.DoCheckFormRegister = function(){
+        
+    var nameValue = document.getElementById("registerName").value;
+    var emailValue = document.getElementById("registerEmail").value;
+    var usernameValue = document.getElementById("registerUsername").value;
+    var passwordValue = document.getElementById("registerPassword").value;
+   
+    registerName = nameValue;
+   registerEmail = emailValue;
+    registerUsername = usernameValue;
+    registerPassword = passwordValue;
+
+   
+    if(nameValue!=="" && emailValue !=="" && passwordValue!=="" && usernameValue!==""){
+       
+   
+
+    const Toast = Swal.mixin({
+       toast: true,
+       position: 'top-end',
+       showConfirmButton: false,
+      timer: 4000,
+        timerProgressBar: true,
+       didOpen: (toast) => {
+         toast.addEventListener('mouseenter', Swal.stopTimer)
+         toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+     })
+         
+     Toast.fire({
+       icon: 'success',
+       title: 'Register is successfully'
+     })
+
+       return registerName,registerEmail,registerUsername,registerPassword;
+       
+       
+       
+    }
+    else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Stop..',
+            text: 'Name or Email or password cannot be empty'
+          })
+    }
+}
+
+this.DoCheckLogin = function(){
+   var loginUsername = document.getElementById("loginUsername").value;
+   var loginPassword = document.getElementById("loginPassword").value;
+   var MyAccountPage = document.getElementById("MyAccountPage");
+   var LoginDiv = document.getElementById("LoginDv");
+   var loginregisterButton = document.getElementById("loginregisterbutton");
+   var accountPageTitle = document.getElementById("accountPageTitle");
+   var accountPageText = document.getElementById("accountPageText");
+   
+   
+
+   if(registerUsername == loginUsername && registerPassword == loginPassword){
+       
+       Swal.fire({
+           icon: 'success',
+           title: 'Great !',
+           text: "Hey Welcome You have logged in successfuly" 
+         })
+
+       let showMyAccountPage = () =>{
+           MyAccountPage.className="MyAccountPage MyAccountPage-visible";
+           LoginDiv.className = "LoginDv";
+       }
+       setTimeout(showMyAccountPage,2000);
+       
+        
+       loginregisterButton.innerHTML=
+       `
+       <i style="margin-right: 2px;" class="fa fa-user"></i>
+       <b> ${loginUsername}</b>
+       `
+       loginregisterButton.addEventListener("click",function(){
+        MyAccountPage.className="MyAccountPage MyAccountPage-visible";   
+       })
+       
+       accountPageTitle.innerHTML = `Welcome to Your Page Mr. ${loginUsername}`;
+       accountPageText.textContent = "You can make any changes you want on this page."
+       
+   }
+   else{
+       Swal.fire({
+           icon: 'error',
+           title: 'Stop..',
+           text: "Username or password incorrect!"
+         })
+   }
+   oldPassword = loginPassword;
+   
+   chekUsername = loginUsername;
+   return checkPassword,checkUsername;
+     
+}
+this.DoShowUserInformations = function(){
+   var UserInformations = document.getElementById("accountInformations");
+   UserInformations.innerHTML ="";
+   UserInformations.innerHTML = `
+   
+   <table class="table table-primary">
+   <thead>
+     <tr>
+       <th scope="col">ID</th>
+       <th scope="col">NAME</th>
+       <th scope="col">USERNAME</th>
+       <th scope="col">MAIL ADRESS</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <th scope="row">1</th>
+       <td>${registerName}</td>
+       <td>${registerUsername}</td>
+       <td>${registerEmail}</td>
+     </tr>
+     
+     </tbody>
+     </table>
+     
+   `;
+}
+this.DoChangeUserPassword = function(){
+   var UserInformationsPas = document.getElementById("accountInformations");
+   UserInformationsPas.innerHTML ="";
+   UserInformationsPas.innerHTML = `
+   <div class="accountInformations animate__animated animate__fadeIn ">
+   <p style="font-size:20px; margin-top:15px;" class="text-center fw-bold">Reset Password</p> <br>
+   <div id="inputs">
+   <label>Old Password :</label>
+   <input style="margin-bottom: 20px; padding:5px; border-radius:5px;" id="oldpassword" type="password" placeholder="Old Password.."><br>
+   <label>New Password :</label>
+   <input style="margin-bottom: 20px; padding:5px; border-radius:5px;" id="newpassword" type="password" placeholder="New Password.."><br>
+   <button style="margin-left:60px; margin-bottom:20px" class="btn btn-primary" ng-click="ChangeOldPassword(); " id="resetPassword" type="button">Reset Password</button>
+   </div>
+   `;
+                
+}
+// <!------------ DEVAM EDİLECEK ----------- !> 
+
+
+this.DoChangeOldPassword = function(){
+     console.log("selam");
+    
+}
+this.DoChangeMailAdress = function(){
+   var UserInformationsMail = document.getElementById("accountInformations");
+   UserInformationsMail.innerHTML ="";
+   UserInformationsMail.innerHTML =`
+   <div class="accountInformations animate__animated animate__fadeIn ">
+   <p style="font-size:20px; margin-top:15px;" class="text-center fw-bold">Mail Adress Change</p> <br>
+   <div id="mailInputs">
+   <label>Old Mail Adress :</label>
+   <input style="margin-bottom: 20px; padding:5px; border-radius:5px;" type="password" placeholder="Old mail adress.."><br>
+   <label>New Mail Adress :</label>
+   <input style="margin-bottom: 20px; padding:5px; border-radius:5px;" type="password" placeholder="New Mail Adress.."><br>
+   <button style="margin-left:90px; margin-bottom:20px" class="btn btn-primary" type="button">Reset Mail Adress</button>
+   </div>
+   `;
+
+
+}
 
 
 });

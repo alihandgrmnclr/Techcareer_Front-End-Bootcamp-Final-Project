@@ -7,7 +7,9 @@
     <title>Techcareer Bootcamp Final Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-
+    
+    <!-- My Account Page  -->
+    <link rel="stylesheet" type="text/css" href="css/MyAccountPage.css">
     <!-- Login-Register -->
     <link rel="stylesheet" type="text/css" href="css/Login-Register.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
@@ -94,10 +96,11 @@
                             <a class="social"><i class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                         <span>or use your email for registration</span>
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <button>Sign Up</button>
+                        <input type="text" id="registerName" placeholder="Name" />
+                        <input type="text" id="registerUsername" placeholder="Username" />
+                        <input type="email" id="registerEmail" placeholder="Email" />
+                        <input type="password" id="registerPassword" placeholder="Password" />
+                        <button type="button" ng-click="checkFormRegister();">Sign Up</button>
                     </form>
                 </div>
                 <div class="form-container sign-in-container">
@@ -109,10 +112,10 @@
                             <a class="social"><i class="fa-brands fa-linkedin-in"></i></a>
                         </div>
                         <span>or use your account</span>
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
+                        <input type="text" id="loginUsername" placeholder="Username" />
+                        <input type="password" id="loginPassword" placeholder="Password" />
                         <a>Forgot your password?</a>
-                        <button>Sign In</button>
+                        <button type="button" ng-click="checkLogin();">Sign In</button>
                     </form>
                 </div>
                 <div class="overlay-container">
@@ -138,6 +141,29 @@
 
         <!-- =================================================================================LOGIN-REGISTER END=============================================================================== -->
 
+
+        <!-- =================================================================================MY ACCOUNT PAGE=============================================================================== -->
+        <div style="width: 100%; height:100%;" id="MyAccountPage" class="MyAccountPage">
+            <h1 id="MyAccountPageClose" style="margin-top: 65px; margin-right:50px; color: white;" ng-click="AccountPageClose();" >X</h1>
+                <div id="UserPage" class="container mt-5">
+                    <!-- Main title -->
+                    <div class="main-title my-4">
+                        <h1 id="accountPageTitle" style="margin-top: 40px;"></h1>
+                        <p id="accountPageText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                    </div>
+                    <div id="AccountElements">
+                    <ul>
+                        <li style="margin-top:20px;" class="MyAccountItems" ><a href="#" ng-click="ShowUserInformations();" >Account Information</a></li>
+                        <li class="MyAccountItems" ><a href="#" ng-click="ChangeMyPassword();">Change Password</a></li>
+                        <li class="MyAccountItems" ><a href="#" ng-click="ChangeMailAdress();">Change Mail Adress</a></li>
+                    </ul>          
+                    </div>
+                    <div id="accountInformations" class="text-center mb-30 animate__animated animate__delay-2s">
+                        
+                    </div>
+                </div>
+            
+        </div>
 
          <!-- ================================================================================ CHECK OUT START =================================================================================== -->
          <div style="width: 100%; height: 100%;" id="PaymentScreen" class="CheckOut">
@@ -535,9 +561,8 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-5 col-5">
                         <ul id="UserLogin" class="top-social-media pull-right">
-                            <li ng-click="LoginOpen();">
-                                <a class="sign-in"><i style="margin-right: 5px;" class="fa fa-user"></i>Login /
-                                    Register</a>
+                            <li id="registerListItem" ng-click="LoginOpen();">
+                                <a class="sign-in" id="loginregisterbutton"><i style="margin-right: 5px;" class="fa fa-user"></i>Login/Register</a>
                             </li>
                         </ul>
                     </div>

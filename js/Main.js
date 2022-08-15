@@ -186,4 +186,35 @@ MyApplication.controller("MyController", function($scope, $http, $timeout, MySer
  };
 
 
+ // <! ---- Mustafa --- !> //
+
+ $scope.checkFormRegister = function(){
+    MyService.DoCheckFormRegister();
+}
+$scope.checkLogin = function(){
+    MyService.DoCheckLogin();
+        
+}
+$scope.AccountPageOpen = function(){
+    MyService.MyAccountPageOpen();
+}
+$scope.AccountPageClose = function(){
+    MyService.MyAccountPageClose();
+}
+$scope.ShowUserInformations = function(){
+    MyService.DoShowUserInformations();
+}
+$scope.ChangeMyPassword = function(){
+    MyService.DoChangeUserPassword();
+}
+$scope.ChangeMailAdress = function(){
+    MyService.DoChangeMailAdress();
+}
+$scope.ChangeOldPassword = function(){
+    MyService.DoChangeOldPassword();
+}
+$scope.ShowMyAccountPage = function(){
+    MyService.DoShowMyAccountPage();
+}
+
 });
