@@ -67,20 +67,10 @@
     <!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="js/ie-emulation-modes-warning.js"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script  src="js/html5shiv.min.js"></script>
-    <script  src="js/respond.min.js"></script>
-    <![endif]-->
 
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css"> -->
 </head>
 
-<body onload="Login(); SetGallery();">
+<body onload="Login(); SetGallery(); Hello();">
 
 
     <div ng-app="MyApplication" ng-controller="MyController" ng-init="SetData();">
@@ -180,34 +170,6 @@
         <div style="width: 100%; height: 100%;" id="PaymentScreen" class="CheckOut">
             <h1 id="PaymentClose" ng-click="PaymentScreenClose();">X</h1>
             <div class="container mt-4 p-0">
-                <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white pt-3 px-md-4 px-2">
-    <div class="container-fluid"> <a class="navbar-brand" href="#">clothing</a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-        <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"> <a class="nav-link active" href="#">New</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">Men</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">Women</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">Kids</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#">Special Offers</a> </li>
-            </ul>
-            <ul class="d-flex mb-0">
-                <li class="nav-item pe-3">
-                    <div class="d-flex align-items-center">
-                        <div class="icon me-3"> <span class="fas fa-shopping-cart"></span> </div>
-                        <div class="cart">
-                            <p class="">My cart</p> <small class="">3 items</small>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item me-3">
-                    <div class="btn btn-outline-primary">Sign Up</div>
-                </li>
-                <li class="nav-item">
-                    <div class="btn btn-primary">Login</div>
-                </li>
-            </ul>
-        </div>
-    </div> -->
                 </nav>
                 <div class="row px-md-4 px-2 pt-4">
                     <div class="col-lg-8">
@@ -215,7 +177,8 @@
                         <div class="card">
                             <!-- <div class="ribbon ribbon-top-right"><span>SALE TIME!</span></div> -->
                             <div>
-                                <div class="table-responsive px-md-4 px-2 pt-3">
+                                <div class="table-responsive px-md-4 px-2 pt-3"
+                                    style="max-height: 350px; overflow: auto;">
                                     <table class="table table-borderless">
                                         <tbody>
                                             <tr class="border-bottom" ng-repeat="Basket in BasketList">
@@ -249,67 +212,6 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <!-- <tr class="border-bottom">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div> <img class="pic"
-                                                                src="https://images.pexels.com/photos/7322083/pexels-photo-7322083.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                                                                alt=""> </div>
-                                                        <div class="ps-3 d-flex flex-column">
-                                                            <p class="fw-bold">Court<span class="ps-1">Dri-FIT</span>
-                                                            </p> <small class=" d-flex"> <span
-                                                                    class=" text-muted">Color:</span> <span
-                                                                    class="fw-bold">Dark Blue</span> </small> <small
-                                                                class=""> <span class=" text-muted">Size:</span> <span
-                                                                    class="fw-bold">L</span> </small>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex">
-                                                        <p class="pe-3"><span class="red">$45.00</span></p>
-                                                        <p class="text-muted text-decoration-line-through">$55.00</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center"> <span
-                                                            class="pe-3 text-muted">Quantity</span> <span class="pe-3">
-                                                            <input class="ps-2" type="number" value="2"></span>
-                                                        <div class="round"> <span class=""> L </span> </div>
-                                                    </div>
-                                                </td>
-                                            </tr> -->
-                                            <!-- <tr class="">
-                                                <td>
-                                                    <div class="d-flex align-items-center">
-                                                        <div> <img class="pic"
-                                                                src="https://images.pexels.com/photos/7322083/pexels-photo-7322083.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                                                                alt=""> </div>
-                                                        <div class="ps-3 d-flex flex-column">
-                                                            <p class="fw-bold"> Sportswear<span
-                                                                    class="ps-1">Heritage</span><span
-                                                                    class="ps-1">Windrunner</span></p> <small class="">
-                                                                <span class=" text-muted">Color:</span> <span
-                                                                    class="fw-bold">Blue/White</span> </small> <small
-                                                                class=""> <span class=" text-muted">Size:</span> <span
-                                                                    class="fw-bold">L</span> </small>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex">
-                                                        <p class="pe-3"><span class="red">$45.00</span></p>
-                                                        <p class="text-muted text-decoration-line-through">$55.00</p>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex align-items-center"> <span
-                                                            class="pe-3 text-muted">Quantity</span> <span class="pe-3">
-                                                            <input class="ps-2" type="number" value="2"></span>
-                                                        <div class="round"> <span class=""> L </span> </div>
-                                                    </div>
-                                                </td>
-                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
@@ -320,10 +222,6 @@
                         <p class="fw-bold pt-lg-0 pt-4 pb-2">Payment Summary</p>
                         <div class="card px-md-3 px-2 pt-4">
                             <div class="unregistered mb-4"> <span class="py-1">unregistered account</span> </div>
-                            <!-- <div class="d-flex justify-content-between pb-3"> <small class="text-muted">Transaction
-                                    code</small>
-                                <p class="">GJSD85</p>
-                            </div> -->
                             <div class="d-flex justify-content-between b-bottom"> <input type="text" name="code"
                                     id="CouponCode" class="ps-2" placeholder="COUPON CODE">
                                 <button type="submit" class="btn btn-primary" id="BtnDiscountApply"
@@ -350,93 +248,7 @@
                             <div style="height: 1.6vh;"></div>
                         </div>
                     </div>
-                    <!-- <div class="col-lg-8 delivery px-md-3 px-1">
-                    <p class="pt-4 fw-bold pb-3 ps-2">Delivery</p>
-                    <div class="d-md-flex justify-content-between align-items-center pb-4">
-                        <div class="size d-flex ps-4"> <label class="option d-flex align-items-center"> <input
-                                    type="radio" name="radio">
-                                <div class="card">
-                                    <div class="d-flex align-items-center">
-                                        <div class="d-flex align-items-center justify-content-center"> <img
-                                                class="del"
-                                                src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
-                                                alt="">
-                                            <p class="ps-2">DPD</p>
-                                        </div>
-                                        <div class=" d-flex flex-column px-3">
-                                            <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
-                                                class="text-muted pb-1">Expected<span
-                                                    class="ps-1">delivery:</span></small> <small
-                                                class="text-muted pb-1">Friday:28</small>
-                                        </div>
-                                        <p class="fw-bold">$5.25</p>
-                                    </div>
-                                </div> <span class="checkmark"></span>
-                            </label> </div>
-                        <div class="size d-flex pt-md-0 pt-3 ps-md-0 ps-4"> <label
-                                class="option d-flex align-items-center"> <input type="radio" name="radio">
-                                <div class="card">
-                                    <div class="d-flex align-items-center">
-                                        <div class="d-flex align-items-center justify-content-center"> <img
-                                                class="del"
-                                                src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
-                                                alt="">
-                                            <p class="ps-2">DPD</p>
-                                        </div>
-                                        <div class=" d-flex flex-column px-3">
-                                            <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
-                                                class="text-muted pb-1">Expected<span
-                                                    class="ps-1">delivery:</span></small> <small
-                                                class="text-muted pb-1">Friday:28</small>
-                                        </div>
-<p class="fw-bold">$5.25</p>
-                                    </div>
-                                </div> <span class="checkmark"></span>
-                            </label> </div>
-                    </div>
-                    <div class="d-md-flex justify-content-between align-items-center pb-4">
-                        <div class="size d-flex ps-4"> <label class="option d-flex align-items-center"> <input
-                                    type="radio" name="radio">
-                                <div class="card">
-                                    <div class="d-flex align-items-center">
-                                        <div class="d-flex align-items-center justify-content-center"> <img
-                                                class="del"
-                                                src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
-                                                alt="">
-                                            <p class="ps-2">DPD</p>
-                                        </div>
-                                        <div class=" d-flex flex-column px-3">
-                                            <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
-                                                class="text-muted pb-1">Expected<span
-                                                    class="ps-1">delivery:</span></small> <small
-                                                class="text-muted pb-1">Friday:28</small>
-                                        </div>
-                                        <p class="fw-bold">$5.25</p>
-                                    </div>
-                                </div> <span class="checkmark"></span>
-                            </label> </div>
-                        <div class="size d-flex pt-md-0 pt-3 ps-md-0 ps-4"> <label
-                                class="option d-flex align-items-center"> <input type="radio" name="radio">
-                                <div class="card">
-                                    <div class="d-flex align-items-center">
-                                        <div class="d-flex align-items-center justify-content-center"> <img
-                                                class="del"
-                                                src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png"
-                                                alt="">
-                                            <p class="ps-2">DPD</p>
-                                        </div>
-                                        <div class=" d-flex flex-column px-3">
-                                            <p class="fw-bold pb-1">DPD<span>Deliveries</span></p> <small
-                                                class="text-muted pb-1">Expected<span
-                                                    class="ps-1">delivery:</span></small> <small
-                                                class="text-muted pb-1">Friday:28</small>
-                                        </div>
-                                        <p class="fw-bold">$5.25</p>
-                                    </div>
-                                </div> <span class="checkmark"></span>
-                            </label> </div>
-                    </div>
-                </div> -->
+
                     <div style="margin-left:90vh;" class="col-lg-4  ">
                         <p class="pt-4 fw-bold pb-3">Additional Service</p>
                         <div class="card p-3 mb-2">
@@ -518,18 +330,6 @@
                             </div>
                         </div>
                     </li>
-                    <!-- <li>
-                        <a href="javascript:void(0)" class="remove" title="Remove this item"><i
-                                class="lni lni-close"></i></a>
-                        <div class="cart-img-head">
-                            <a class="cart-img" href="product-details.html"><img
-                                    src="assets/images/header/cart-items/item2.jpg" alt="#"></a>
-                        </div>
-                        <div class="content">
-                            <h4><a href="product-details.html">Wi-Fi Smart Camera</a></h4>
-                            <p class="quantity">1x - <span class="amount">$35.00</span></p>
-                        </div>
-                    </li>  -->
                 </ul>
 
             </div>
@@ -545,17 +345,6 @@
                         class="btn animate" id="BtnCheckOut">Checkout</button>
                 </div>
             </div>
-
-
-
-
-
-
-            <!-- <div div id="Products">
-          
-          
-
-            </div> -->
 
             <a class="read-more-btn" ng-click="ClearBasket();">Clear Basket</a>
             <div class="setting-button">
@@ -603,18 +392,6 @@
                     </button>
                     <div class="navbar-collapse collapse w-100 justify-content-end" id="navbar">
                         <ul class="navbar-nav ml-auto">
-                            <!-- <li class="nav-item dropdown active">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Index
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="index.html">Index 1</a></li>
-                                    <li><a class="dropdown-item" href="index-2.html">Index 2</a></li>
-                                    <li><a class="dropdown-item" href="index-3.html">Index 3</a></li>
-                                    <li><a class="dropdown-item" href="index-4.html">Index 4</a></li>
-                                </ul>
-                            </li> -->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1072,12 +849,18 @@
                             </div>
                         </nav>
                         <div class="room-gallery flex-nowrap flex-row">
-                            <div class="image" data-name="Single Room"><img class="w-100" src="img/room/img-1.jpg" alt=""></div>
-                            <div class="image" data-name="Single Room"><img class="w-100" src="img/room/img-2.jpg" alt=""></div>
-                            <div class="image" data-name="Family Room"><img class="w-100" src="img/room/img-3.jpg" alt=""></div>
-                            <div class="image" data-name="Luxury Room"><img class="w-100" src="img/room/img-4.jpg" alt=""></div>
-                            <div class="image" data-name="Double Room"><img class="w-100" src="img/room/img-5.jpg" alt=""></div>
-                            <div class="image" data-name="Double Room"><img class="w-100" src="img/room/img-1.jpg" alt=""></div>
+                            <div class="image" data-name="Single Room"><img class="w-100" src="img/room/img-1.jpg"
+                                    alt=""></div>
+                            <div class="image" data-name="Single Room"><img class="w-100" src="img/room/img-2.jpg"
+                                    alt=""></div>
+                            <div class="image" data-name="Family Room"><img class="w-100" src="img/room/img-3.jpg"
+                                    alt=""></div>
+                            <div class="image" data-name="Luxury Room"><img class="w-100" src="img/room/img-4.jpg"
+                                    alt=""></div>
+                            <div class="image" data-name="Double Room"><img class="w-100" src="img/room/img-5.jpg"
+                                    alt=""></div>
+                            <div class="image" data-name="Double Room"><img class="w-100" src="img/room/img-1.jpg"
+                                    alt=""></div>
                         </div>
                         <div class="preview-box">
                             <div class="details">
@@ -1122,17 +905,6 @@
                                         <p>{{Facility.Description}}</p>
                                     </div>
                                 </div>
-                                <!-- <div class="services-box-3 df-box" ng-repeat="Facility in OurFacilities | limitTo: 3:1">
-                            <div class="icon">
-                                <i class="{{Facility.Icon}}"></i>
-                            </div>
-                            <div class="detail">
-                                <h5>
-                                    <a href="#">{{Facility.Title}}</a>
-                                </h5>
-                                <p>{{Facility.Description}}</p>
-                            </div>
-                        </div> -->
 
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -1392,7 +1164,7 @@
                             src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/29496/dice-a-aidima-kauliukas-loa-ima-games-clipart-sm.png"
                             height="50" alt=""></span>
                     <h1>Hey!</h1>
-                    <p>Feel Lucky? If you dice 5 you'll earn 10% discount Coupon!</p>
+                    <p>Feel Lucky? If you dice 5 you'll earn 25% discount Coupon!</p>
                     <button id="DiceButton" ng-click="CouponLuck();" type="button">Roll</button>
                     <span id="dice"></span>
                     <span style="color: white;" id="CouponText"></span>
