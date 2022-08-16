@@ -145,161 +145,206 @@ this.FindBasketPrice = function (iIndex) {
     return result;
 };
 
-
 this.ClearBasket = function () {
     var ShoppingList = document.getElementById("ShoppingList");
     var TotalPrice = document.getElementById('TotalPrice');
     var NumberOfItem = document.getElementById("NumberOfItem");
-    ShoppingList.innerHTML = "";
+    var TotalAmount = document.getElementById('TotalAmount');
+    var OrderSummary = document.getElementById('OrderSummary');
+    var Discount = document.getElementById("Discount");
+    var NumberOfItem = document.getElementById("NumberOfItem");
+
+
     TotalPrice.innerHTML = "Total 0";
-    NumberOfItem.innerHTML = "0 Items";
+    BasketPriceList = [];
+    BasketList = [];
+    Cnt = 0;
+    console.log(BasketList);
+    TotalPriceWithDiscount = 0;
+    Discount.innerHTML = `$${TotalPriceWithDiscount}`;
+    NumberOfItem.innerHTML = `${Cnt} Items`;
+
+    for(var i=0; i<OurBestRooms.length; i++) {
+        OurBestRooms[i].Counter=0;
+    };
 
 };
 
 
 
-this.PaymentScreenOpen = function () {
-    var PaymentScreen = document.getElementById("PaymentScreen");
-    PaymentScreen.className = "CheckOut CheckOut-visible";
+// this.PaymentScreenOpen = function () {
+//     var PaymentScreen = document.getElementById("PaymentScreen");
+//     PaymentScreen.className = "CheckOut CheckOut-visible";
 
 
-};
+// };
 
-this.PaymentScreenClose = function () {
-    var PaymentScreen = document.getElementById("PaymentScreen");
-    PaymentScreen.className = "CheckOut";
-};
+// this.PaymentScreenClose = function () {
+//     var PaymentScreen = document.getElementById("PaymentScreen");
+//     PaymentScreen.className = "CheckOut";
+// };
 
 
 // -----------CheckOut--------------------
 
+var SwitchCheck0 = document.getElementById("SwitchCheck0");
+var SwitchCheck1 = document.getElementById("SwitchCheck1");
+var SwitchCheck2 = document.getElementById("SwitchCheck2");
+
+var SwitchCheck0Price = 10;
+var SwitchCheck1Price = 2;
+var SwitchCheck2Price = 15;
+
+var AdditionalService = document.getElementById("AdditionalService");
+var AdditionalServicePrice = 0;
+var TotalPriceWithDiscount = 0;
+
+
+
+SwitchCheck0.addEventListener('change', function () {
+
+
+    if (this.checked) {
+        AdditionalServicePrice += SwitchCheck0Price;
+        Total += SwitchCheck0Price;
+
+
+        AdditionalService.innerHTML = `$${AdditionalServicePrice}`;
+        TotalAmount.innerHTML = `$${Total}`
+
+    } else {
+
+        Total -= SwitchCheck0Price;
+        AdditionalServicePrice -= SwitchCheck0Price;
+        TotalAmount.innerHTML = `$${Total}`
+        AdditionalService.innerHTML = `$${AdditionalServicePrice}`;
+    }
+
+});
+
+
+SwitchCheck1.addEventListener('change', function () {
+
+
+
+    if (this.checked) {
+        AdditionalServicePrice += SwitchCheck1Price;
+        Total += SwitchCheck1Price;
+
+
+        AdditionalService.innerHTML = `$${AdditionalServicePrice}`;
+        TotalAmount.innerHTML = `$${Total}`
+
+    } else {
+
+        Total -= SwitchCheck1Price;
+        AdditionalServicePrice -= SwitchCheck1Price;
+        TotalAmount.innerHTML = `$${Total}`
+        AdditionalService.innerHTML = `$${AdditionalServicePrice}`;
+    }
+});
+
+
+SwitchCheck2.addEventListener('change', function () {
+
+
+    if (this.checked) {
+        AdditionalServicePrice += SwitchCheck2Price;
+        Total += SwitchCheck2Price;
+
+
+        AdditionalService.innerHTML = `$${AdditionalServicePrice}`;
+        TotalAmount.innerHTML = `$${Total}`
+
+    } else {
+
+        Total -= SwitchCheck2Price;
+        AdditionalServicePrice -= SwitchCheck2Price;
+        TotalAmount.innerHTML = `$${Total}`
+        AdditionalService.innerHTML = `$${AdditionalServicePrice}`;
+    }
+});
+
+
+
 this.FindOrderSummary = function () {
     var OrderSummary = document.getElementById("OrderSummary");
+    Total = 0;
 
     for (var i = 0; i < BasketPriceList.length; i++) {
         if (isNaN(BasketPriceList[i])) {
             continue;
         }
-        result += Number(BasketPriceList[i]);
+        Total += Number(BasketPriceList[i]);
     };
-    console.log(result);
 
+    console.log(BasketPriceList);
+    console.log(Total);
 
-    OrderSummary.innerHTML = `<small class="text-muted" >Order
-    Summary</small> <p>$${result}</p>`;
-   
+    OrderSummary.innerHTML = `$${Total}`;
+
 };
+
+this.ShowAlertWrongCouponCode = function() {
+    var CouponCode = document.getElementById("CouponCode").value;
+    var IsTrue = CouponCodeList.includes(CouponCode);
+    if(!IsTrue) {
+        alert('There is no such coupon code!')
+    }
+};
+
 
 
 
 this.FindDiscount = function () {
     var CouponCode = document.getElementById("CouponCode").value;
     var Discount = document.getElementById("Discount");
-    
     var IsTrue = CouponCodeList.includes(CouponCode);
+
     if (IsTrue) {
 
-        for (var i = 0; i < BasketPriceList.length; i++) {
-            if (isNaN(BasketPriceList[i])) {
-                continue;
-            }
-           Total += Number(BasketPriceList[i]);
-          
-        };
-    var TotalPriceWithDiscount = Total * 0.25;
-     
-     Discount.innerHTML =` -$${TotalPriceWithDiscount}`;
-     document.getElementById("BtnDiscountApply").remove();
-     
+        TotalPriceWithDiscount = Total * 0.25;
+        Discount.innerHTML = ` -$${TotalPriceWithDiscount}`;
+        document.getElementById("BtnDiscountApply").remove();
+
     }
     else {
         TotalPriceWithDiscount = 0;
+       
     };
-   
+
     return TotalPriceWithDiscount;
 };
 
-this.FindTotalAmount = function(){
+this.FindTotalAmount = function () {
     var TotalAmount = document.getElementById("TotalAmount");
+    Total = Total + AdditionalServicePrice - (TotalPriceWithDiscount);
 
-    for (var i = 0; i < BasketPriceList.length; i++) {
-        if (isNaN(BasketPriceList[i])) {
-            continue;
-        }
-        result += Number(BasketPriceList[i]);
-    };
-    console.log(result);
-
-
-    TotalAmount.innerHTML = `<p>$${result/2}</p>`;
-    
-
-//     var TotalAmount = document.getElementById("TotalAmount");
-//     var TotalPriceWithDiscount = FindDiscount()
-
-//     for (var i = 0; i < BasketPriceList.length; i++) {
-//         if (isNaN(BasketPriceList[i])) {
-//             continue;
-//         }
-//         Total2+= Number(BasketPriceList[i]);
-//     };
-//   if (TotalPriceWithDiscount == undefined){
-//     TotalAmount.innerHTML = `$${Total2}`
-//   }
-//   else{
-//     TotalAmount.innerHTML = `$${Total2 -(TotalPriceWithDiscount)}`;
-//   }
-   
-//  console.log(TotalPriceWithDiscount);
-
-};  
-
-
-
-this.FindTotalAmountWithDiscount = function(){
-    var TotalAmount = document.getElementById("TotalAmount");
-    var CouponCode = document.getElementById("CouponCode").value;
-    var Discount = document.getElementById("Discount");
-    
-    var IsTrue = CouponCodeList.includes(CouponCode);
-
-    for (var i = 0; i < BasketPriceList.length; i++) {
-        if (isNaN(BasketPriceList[i])) {
-            continue;
-        }
-       Total += Number(BasketPriceList[i]);
-    }; 
-
-    if (IsTrue) {
-
-    var TotalPriceWithDiscount = Total * 0.25;
-    TotalAmount.innerHTML = `$${(Total -(TotalPriceWithDiscount))/2}`
-    }
-    else {
-        TotalPriceWithDiscount = 0;
-        TotalAmount.innerHTML = `$${Total}`
-    };
-   
-   
-//     var TotalAmount = document.getElementById("TotalAmount");
-
-
-//     for (var i = 0; i < BasketPriceList.length; i++) {
-//         if (isNaN(BasketPriceList[i])) {
-//             continue;
-//         }
-//         Total2+= Number(BasketPriceList[i]);
-//     };
-//   if (TotalPriceWithDiscount == undefined){
-//     TotalAmount.innerHTML = `$${Total2}`
-//   }
-//   else{
-//     TotalAmount.innerHTML = `$${Total2 -(TotalPriceWithDiscount)}`;
-//   }
-   
+    TotalAmount.innerHTML = `<p>$${Total}</p>`;
 
 };
 
+
+
+this.FindTotalAmountWithDiscount = function () {
+    var TotalAmount = document.getElementById("TotalAmount");
+    var CouponCode = document.getElementById("CouponCode").value;
+    var Discount = document.getElementById("Discount");
+
+
+    var IsTrue = CouponCodeList.includes(CouponCode);
+    TotalAmount.innerHTML = "";
+
+    if (IsTrue) {
+        Total = Total + AdditionalServicePrice - (TotalPriceWithDiscount);
+        TotalAmount.innerHTML = `$${(Total)}`
+    }
+    else {
+        TotalAmount.innerHTML = `$${Total}`
+    };
+
+
+};
 // <!--- Mustafa --- !> //
 
 this.MyAccountPageOpen = function(){

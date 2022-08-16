@@ -7,7 +7,7 @@
     <title>Techcareer Bootcamp Final Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    
+
     <!-- My Account Page  -->
     <link rel="stylesheet" type="text/css" href="css/MyAccountPage.css">
     <!-- Login-Register -->
@@ -15,10 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/all.css">
     <!-- Animate Min css-->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Check Out -->
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
@@ -148,29 +145,36 @@
 
         <!-- =================================================================================MY ACCOUNT PAGE=============================================================================== -->
         <div style="width: 100%; height:100%;" id="MyAccountPage" class="MyAccountPage">
-            <h1 id="MyAccountPageClose" style="margin-top: 65px; margin-right:50px; color: white;" ng-click="AccountPageClose();" >X</h1>
-                <div id="UserPage" class="container mt-5">
-                    <!-- Main title -->
-                    <div class="main-title my-4">
-                        <h1 id="accountPageTitle" style="margin-top: 40px;"></h1>
-                        <p id="accountPageText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-                    </div>
-                    <div id="AccountElements">
-                    <ul>
-                        <li style="margin-top:20px;" class="MyAccountItems" ><a href="#" ng-click="ShowUserInformations();" >Account Information</a></li>
-                        <li class="MyAccountItems" ><a href="#" ng-click="ChangeMyPassword();">Change Password</a></li>
-                        <li class="MyAccountItems" ><a href="#" ng-click="ChangeMailAdress();">Change Mail Adress</a></li>
-                    </ul>          
-                    </div>
-                    <div id="accountInformations" class="text-center mb-30 animate__animated animate__delay-2s">
-                        
-                    </div>
+            <h1 id="MyAccountPageClose" style="margin-top: 65px; margin-right:50px; color: white;"
+                ng-click="AccountPageClose();">X</h1>
+            <div id="UserPage" class="container mt-5">
+                <!-- Main title -->
+                <div class="main-title my-4">
+                    <h1 id="accountPageTitle" style="margin-top: 40px;"></h1>
+                    <p id="accountPageText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
                 </div>
-            
+                <div id="AccountElements">
+                    <ul>
+                        <li style="margin-top:20px;" class="MyAccountItems"><a href="#"
+                                ng-click="ShowUserInformations();">Account Information</a></li>
+                        <li class="MyAccountItems"><a href="#" ng-click="ChangeMyPassword();">Change Password</a></li>
+                        <li class="MyAccountItems"><a href="#" ng-click="ChangeMailAdress();">Change Mail Adress</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="accountInformations" class="text-center mb-30 animate__animated animate__delay-2s">
+
+                </div>
+            </div>
+
         </div>
 
-         <!-- ================================================================================ CHECK OUT START =================================================================================== -->
-         <div style="width: 100%; height: 100%;" id="PaymentScreen" class="CheckOut">
+
+        <!-- =================================================================================LOGIN-REGISTER END=============================================================================== -->
+
+
+        <!-- ================================================================================ CHECK OUT START =================================================================================== -->
+        <div style="width: 100%; height: 100%;" id="PaymentScreen" class="CheckOut">
             <h1 id="PaymentClose" ng-click="PaymentScreenClose();">X</h1>
             <div class="container mt-4 p-0">
                 <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white pt-3 px-md-4 px-2">
@@ -214,15 +218,14 @@
                                             <tr class="border-bottom" ng-repeat="Basket in BasketList">
                                                 <td>
                                                     <div class="d-flex align-items-center">
-                                                        <div> <img class="pic"
-                                                                src="{{Basket.ImgUrl}}"
-                                                                alt=""> </div>
+                                                        <div> <img class="pic" style="width:100px ;"
+                                                                src="{{Basket.ImgUrl}}" alt=""> </div>
                                                         <div class="ps-3 d-flex flex-column justify-content">
-                                                            <p class="fw-bold">Air<span class="ps-1">Red</span><span
+                                                            <p class="fw-bold"><span class="ps-1"></span><span
                                                                     class="ps-1">{{Basket.Room}}</span></p> <small
                                                                 class=" d-flex"> <span class=" text-muted"></span>
-                                                                <span class=" fw-bold"></span> </small> <smalls
-                                                                class=""> <span class=" text-muted"></span> <span
+                                                                <span class=" fw-bold"></span> </small>
+                                                            <smalls class=""> <span class=" text-muted"></span> <span
                                                                     class=" fw-bold"></span> </smalls>
                                                         </div>
                                                     </div>
@@ -230,14 +233,16 @@
                                                 <td>
                                                     <div class="d-flex">
                                                         <p class="pe-3"><span class="red">${{Basket.Price}}</span></p>
-                                                        <p class="text-muted text-decoration-line-through">${{Basket.OldPrice}}</p>
+                                                        <p class="text-muted text-decoration-line-through">
+                                                            ${{Basket.OldPrice}}</p>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <div class="d-flex align-items-center"> <span
                                                             class="pe-3 text-muted">Quantity</span> <span class="pe-3">
-                                                            <input class="ps-2" type="number" value="2"></span>
-                                                        <div class="round"> <span class=""> L </span> </div>
+                                                            <input id="Item{{Basket.Index}}" class="ps-2"
+                                                                value="{{Basket.Counter}}"></span>
+                                                        <!-- <div class="round"> <span class="">  </span> </div> -->
                                                     </div>
                                                 </td>
                                             </tr>
@@ -316,22 +321,23 @@
                                     code</small>
                                 <p class="">GJSD85</p>
                             </div> -->
-                            <div class="d-flex justify-content-between b-bottom"> <input type="text" name="code" id="CouponCode"class="ps-2"
-                                    placeholder="COUPON CODE">
-                                <button type="submit" class="btn btn-primary" id="BtnDiscountApply" ng-click="FindDiscount(); FindTotalAmountWithDiscount();">Apply</button>
+                            <div class="d-flex justify-content-between b-bottom"> <input type="text" name="code"
+                                    id="CouponCode" class="ps-2" placeholder="COUPON CODE">
+                                <button type="submit" class="btn btn-primary" id="BtnDiscountApply"
+                                    ng-click="FindDiscount(); FindTotalAmountWithDiscount(); ShowAlertWrongCouponCode();">Apply</button>
                             </div>
                             <div class="d-flex flex-column b-bottom">
-                                <div id="OrderSummary" class="d-flex justify-content-between py-3"> <small class="text-muted" >Order
+                                <div class="d-flex justify-content-between py-3"> <small class="text-muted">Order
                                         Summary</small>
-                                    <p>$122</p>
+                                    <p id="OrderSummary"></p>
                                 </div>
                                 <div class="d-flex justify-content-between pb-3"> <small
-                                        class="text-muted" >Discount</small>
+                                        class="text-muted">Discount</small>
                                     <p id="Discount" style="color: red;">-$0</p>
                                 </div>
                                 <div class="d-flex justify-content-between pb-3"> <small class="text-muted">Additional
                                         Service</small>
-                                    <p>$0</p>
+                                    <p id="AdditionalService">0</p>
                                 </div>
                                 <div class="d-flex justify-content-between"> <small class="text-muted">Total
                                         Amount</small>
@@ -439,7 +445,7 @@
                                 <div class="d-flex align-items-center">
                                     <p class="pe-3">$10.00</p>
                                     <div class="form-check form-switch"> <input class="form-check-input" type="checkbox"
-                                            id="SwitchCheck"> </div>
+                                            id="SwitchCheck0"> </div>
                                 </div>
                             </div>
                         </div>
@@ -452,7 +458,7 @@
                                 <div class="d-flex align-items-center">
                                     <p class="pe-3">$2.00</p>
                                     <div class="form-check form-switch"> <input class="form-check-input" type="checkbox"
-                                            id="SwitchCheck"> </div>
+                                            id="SwitchCheck1"> </div>
                                 </div>
                             </div>
                         </div>
@@ -465,7 +471,7 @@
                                 <div class="d-flex align-items-center">
                                     <p class="pe-3">$15.00</p>
                                     <div class="form-check form-switch"> <input class="form-check-input" type="checkbox"
-                                            id="SwitchCheck"> </div>
+                                            id="SwitchCheck2"> </div>
                                 </div>
                             </div>
                         </div>
@@ -482,8 +488,8 @@
         <div class="page_loader"></div>
 
         <!-- Option Panel -->
-        
-        <div class="option-panel option-panel-collased" >
+
+        <div class="option-panel option-panel-collased">
             <h2>Basket</h2>
             <div> <strong>PRODUCTS</strong> </div>
 
@@ -522,31 +528,39 @@
                         </div>
                     </li>  -->
                 </ul>
-                
+
             </div>
-
-
-
-
-
-
-
 
             <div class="bottom">
-                <div class="total float-end mt-4" >
+                <div class="total float-end mt-4">
                     <span>Total</span>
                     <span id="TotalPrice" class="total-amount">0</span>
-                    </div>
                 </div>
-            <div class="button">
-                <a ng-click="PaymentScreenOpen(); FindOrderSummary(); FindTotalAmount(); " class="btn animate mt-2 read-more-btn" >Checkout</a>
+                <div class="button">
+                    <button
+                        ng-click="FindOrderSummary(); PaymentScreenOpen(); FindTotalAmount(); ChangeCheckOutQuantity(); "
+                        class="btn animate" id="BtnCheckOut">Checkout</button>
+                </div>
             </div>
+
+
+
+
+
+
+            <!-- <div div id="Products">
+          
+          
+
+            </div> -->
+
             <a class="read-more-btn" ng-click="ClearBasket();">Clear Basket</a>
             <div class="setting-button">
                 <i class="fa fa-shopping-cart"><span id="BasketCounter" style="margin-left:5px;"></span></i>
             </div>
         </div>
         <!-- /Option Panel -->
+
 
         <!-- Top header start -->
         <header class="top-header" id="top-header-1">
@@ -561,7 +575,8 @@
                     <div class="col-lg-4 col-md-4 col-sm-5 col-5">
                         <ul id="UserLogin" class="top-social-media pull-right">
                             <li id="registerListItem" ng-click="LoginOpen();">
-                                <a class="sign-in" id="loginregisterbutton"><i style="margin-right: 5px;" class="fa fa-user"></i>Login/Register</a>
+                                <a class="sign-in" id="loginregisterbutton"><i style="margin-right: 5px;"
+                                        class="fa fa-user"></i>Login/Register</a>
                             </li>
                         </ul>
                     </div>
@@ -1023,7 +1038,9 @@
                                             </li>
                                         </ul>
 
-                                        <a class="read-more-btn" ng-click="AddToBasketList(Room.Index); AddItems(Room.Counter); ChangeCounter(Room.Index); FindBasketPrice(Room.Index); ShowSimpleSweetAlert(Room.Index);">Add To Basket</a>
+                                        <a class="read-more-btn"
+                                            ng-click="AddToBasketList(Room.Index); AddItems(Room.Counter); ChangeCounter(Room.Index); FindBasketPrice(Room.Index); ShowSimpleSweetAlert(Room.Index);">Add
+                                            To Basket</a>
                                     </div>
                                 </div>
                             </div>
@@ -1357,20 +1374,22 @@
         <!-- Blog section end -->
 
 
-       <!-- Coupon Code Start -->
-       <div id="" class="CouponMain">
-        <div class="CouponDiv">
-            <div class="CouponInnerDiv">
-                <span id="CouponSpan"><img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/29496/dice-a-aidima-kauliukas-loa-ima-games-clipart-sm.png" height="50" alt=""></span>
-                <h1>Hey!</h1>
-                <p>Feel Lucky? If you dice 5 you'll earn 10% discount Coupon!</p>
-                <button id="DiceButton" ng-click="CouponLuck();" type="button">Roll</button>
-                <span id="dice"></span>
-                <span style="color: white;" id="CouponText"></span>
+        <!-- Coupon Code Start -->
+        <div id="" class="CouponMain">
+            <div class="CouponDiv">
+                <div class="CouponInnerDiv">
+                    <span id="CouponSpan"><img
+                            src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/29496/dice-a-aidima-kauliukas-loa-ima-games-clipart-sm.png"
+                            height="50" alt=""></span>
+                    <h1>Hey!</h1>
+                    <p>Feel Lucky? If you dice 5 you'll earn 10% discount Coupon!</p>
+                    <button id="DiceButton" ng-click="CouponLuck();" type="button">Roll</button>
+                    <span id="dice"></span>
+                    <span style="color: white;" id="CouponText"></span>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Coupon Code End -->
+        <!-- Coupon Code End -->
 
         <!-- Our newslatters start -->
         <div class="our-newslatters">
