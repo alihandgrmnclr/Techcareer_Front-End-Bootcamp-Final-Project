@@ -14,9 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/Login-Register.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/all.css">
-     <!-- Gallery-Filter -->
-     <link rel="stylesheet" type="text/css" href="css/galleryFilter.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
     <!-- Animate Min css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Check Out -->
@@ -29,8 +27,10 @@
 
     <link rel="stylesheet" href="css/CouponCode.css">
 
+    <!-- Gallery-Filter -->
+    <link rel="stylesheet" type="text/css" href="css/galleryFilter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
-  
     <!-- External CSS libraries -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
@@ -80,7 +80,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css"> -->
 </head>
 
-<body onload="Login();">
+<body onload="Login(); SetGallery();">
 
 
     <div ng-app="MyApplication" ng-controller="MyController" ng-init="SetData();">
@@ -1058,9 +1058,9 @@
         <!-- Hotel secion end -->
 
         <div class="photo-gallery content-area">
-            <h2 style="margin-left: 40%;  font-size:55px;">Our Gallery</h2>
+            <h2 style="font-size:55px;" class="text-center">Our Gallery</h2>
             <div class="container">
-                <div class="maindiv">
+                <div class="maindiv d-flex justify-content-center">
                     <div class="wrapperr">
                         <nav>
                             <div class="itemss" id="filter-items">
@@ -1068,28 +1068,28 @@
                                 <span class="item" data-name="Single Room">Single Room</span>
                                 <span class="item" data-name="Family Room">Family Room</span>
                                 <span class="item" data-name="Luxury Room">Luxury Room</span>
-                                <span class="item" data-name="Double Room">Double Room</span>                               
+                                <span class="item" data-name="Double Room">Double Room</span>
                             </div>
                         </nav>
-                       <div class="room-gallery" style="padding: 0px; position: relative;">
-                        <div class="image" data-name="Single Room"><img src="img/room/img-7.jpg" alt=""></div>
-                        <div class="image" data-name="Single Room"><img src="img/room/img-11.jpg" alt=""></div>
-                        <div class="image" data-name="Family Room"><img src="img/room/img-12.jpg" alt=""></div>
-                        <div class="image" data-name="Luxury Room"><span><img src="img/room/img-8.jpg" alt=""></span></div>
-                        <div class="image" data-name="Double Room"><span><img src="img/room/img-13.jpg" alt=""></span></div>
-                        <div class="image" data-name="Double Room"><span><img src="img/room/img-14.jpg" alt=""></span></div>
-                     </div>
-                     <div class="preview-box">
-                        <div class="details">
-                            <span class="title">Image Category: <p>Not defined</p></span>
-                            <span class="icon fas fa-times"></span>   
+                        <div class="room-gallery flex-nowrap flex-row">
+                            <div class="image" data-name="Single Room"><img class="w-100" src="img/room/img-1.jpg" alt=""></div>
+                            <div class="image" data-name="Single Room"><img class="w-100" src="img/room/img-2.jpg" alt=""></div>
+                            <div class="image" data-name="Family Room"><img class="w-100" src="img/room/img-3.jpg" alt=""></div>
+                            <div class="image" data-name="Luxury Room"><img class="w-100" src="img/room/img-4.jpg" alt=""></div>
+                            <div class="image" data-name="Double Room"><img class="w-100" src="img/room/img-5.jpg" alt=""></div>
+                            <div class="image" data-name="Double Room"><img class="w-100" src="img/room/img-1.jpg" alt=""></div>
                         </div>
-                        <div class="img-box">                   
-                            <img class="img" src="" alt="">
-                        </div>                      
-                     </div>
-                     <div class="shadow"></div>
-                        
+                        <div class="preview-box">
+                            <div class="details">
+                                <span class="title">Image Category: <p>Not defined</p></span>
+                                <span class="icon fas fa-times"></span>
+                            </div>
+                            <div class="img-box d-flex justify-content-center mb-3">
+                                <img class="img" src="" alt="">
+                            </div>
+                        </div>
+                        <div class="shadow"></div>
+
                     </div>
                 </div>
             </div>

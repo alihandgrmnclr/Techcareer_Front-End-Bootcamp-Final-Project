@@ -8,7 +8,7 @@ const filterItem = document.getElementById("filter-items");
 var categoryName = previewBox.querySelector(".title p");
 shadow = document.querySelector(".shadow");
  
-window.onload = () =>{
+const SetGallery = () =>{
 	
 	filterItem.onclick = (selectedItem)=>{
 		if(selectedItem.target.classList.contains("item")){
