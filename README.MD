@@ -41,4 +41,6 @@
 
 ### Data's Used with AngularJS
 
-Data's using with AngularJS from data folders 
+Data's using with AngularJS from data folders
+ 
+![angular](gif/angular.gif)
