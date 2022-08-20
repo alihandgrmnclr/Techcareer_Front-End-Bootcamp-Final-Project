@@ -20,12 +20,4 @@
 
 ### Login-Register
 
-<iframe
-    width="640"
-    height="480"
-    src="https://youtu.be/6x3gKJOlEWM"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen
->
-</iframe>
+! [login-register](https://youtu.be/6x3gKJOlEWM)
