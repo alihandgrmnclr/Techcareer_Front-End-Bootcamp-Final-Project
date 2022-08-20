@@ -20,4 +20,4 @@
 
 ### Login-Register
 
-![Login-Register](videos/login-register.mp4)
+![Login-Register](videos/login-register.mov)
