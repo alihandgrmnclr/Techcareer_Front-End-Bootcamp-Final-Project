@@ -20,4 +20,4 @@
 
 ### Login-Register
 
-![Login-Register](videos/login-register.mov)
+![login-register](https://user-images.githubusercontent.com/79924058/185739735-1ca9b7c9-e997-4378-a262-7b758ee87204.mov)
