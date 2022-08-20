@@ -20,4 +20,4 @@
 
 ### Login-Register
 
-[![login-register](photos/login-register.png)](https://youtu.be/6x3gKJOlEWM "login-register")
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/6x3gKJOlEWM/0.jpg)](https://www.youtube.com/watch?v=6x3gKJOlEWM)
